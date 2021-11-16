@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace GasolineraPUMA
 {
-    public partial class Frm_Ventas : Form
+    public partial class btnLimpiar : Form
     {
-        public Frm_Ventas()
+        public btnLimpiar()
         {
             InitializeComponent();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
