@@ -201,7 +201,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="img\boton-agregar.png" />
+    <Content Include="img\boton-editar.png" />
+    <Content Include="img\buscar.png" />
+    <Content Include="img\dinero-en-efectivo.png" />
+    <Content Include="img\eliminar.png" />
+    <Content Include="img\estacion-de-gasolina.png" />
+    <Content Include="img\guardar-el-archivo.png" />
+    <Content Include="img\inventario %281%29.png" />
+    <Content Include="img\limpiar.png" />
+    <Content Include="img\logo.jpeg" />
+    <Content Include="img\mas.png" />
+    <Content Include="img\metodo-de-pago.png" />
+    <Content Include="img\proveedor %281%29.png" />
+    <Content Include="img\proveedor.png" />
+    <Content Include="img\reporte.png" />
+    <Content Include="img\salida.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
