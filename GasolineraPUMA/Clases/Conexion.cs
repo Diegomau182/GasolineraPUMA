@@ -17,7 +17,7 @@ using System.Data;
             conexion = new MySqlConnection();
             BD = "dbpuma";
             usuario = "root";
-            pass = "";
+            pass = " ";
             servidor = "127.0.0.1";
             conexion = new MySqlConnection();
         }
@@ -53,11 +53,11 @@ using System.Data;
             catch (MySqlException e)
             {
                 System.Windows.Forms.MessageBox.Show(string.Format("Error: {0}", e.ToString()));
-
             }
         }
         public DataTable consulta(string sql)
         {
+
             Establecerconexion();
             DataTable t = new DataTable();
             MySqlCommand comando = conexion.CreateCommand();
@@ -70,8 +70,6 @@ using System.Data;
         }
         public Boolean Ejecutar(string sql)
         {
-        //Boolean r = false;
-
             Establecerconexion();
             MySqlCommand comando = conexion.CreateCommand();
             comando.Connection = conexion;
