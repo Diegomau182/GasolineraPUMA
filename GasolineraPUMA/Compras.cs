@@ -10,14 +10,26 @@ using System.Windows.Forms;
 
 namespace GasolineraPUMA
 {
-    public partial class Compras : Form
+    public partial class FmCompras : Form
     {
-        public Compras()
+        public FmCompras()
         {
             InitializeComponent();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FmCompra frm = new FmCompra();
+            frm.Show();
+            this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
