@@ -202,6 +202,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\ClaCompra.cs" />
+    <Compile Include="Clases\ClaListaCompra.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Compra.cs">
       <SubType>Form</SubType>
@@ -260,6 +262,7 @@
     <Content Include="img\boton-agregar.png" />
     <Content Include="img\boton-editar.png" />
     <Content Include="img\buscar.png" />
+    <Content Include="img\cancelar.png" />
     <Content Include="img\Compras.png" />
     <Content Include="img\dinero-en-efectivo.png" />
     <Content Include="img\eliminar.png" />
