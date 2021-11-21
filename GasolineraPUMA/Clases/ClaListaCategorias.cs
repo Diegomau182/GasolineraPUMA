@@ -12,11 +12,17 @@ namespace GasolineraPUMA.Clases
 {
     internal class ClaListaCategorias
     {
-
+        /// <summary>
+        /// Variables a utilizar en la clase
+        /// </summary>
         private List<ClaCategoria> categorias;
         private Conexion conexion;
 
         private DataTable tabla;
+
+        /// <summary>
+        /// Inicializacion de variables
+        /// </summary>/// <summary>
 
         public ClaListaCategorias()
         {
@@ -26,6 +32,9 @@ namespace GasolineraPUMA.Clases
             Cargar_Datos();
         }
 
+        /// <summary>
+        /// Metodo para cargar los datos de la base de datos 
+        /// </summary>
         public void Cargar_Datos()
         {
             conexion.Establecerconexion();
@@ -39,6 +48,10 @@ namespace GasolineraPUMA.Clases
                 categorias.Add(C);
             }
         }
+
+        /// <summary>
+        /// Propiedades de la clase
+        /// </summary>
         public List<ClaCategoria> ListaCategorias
         {
             get
