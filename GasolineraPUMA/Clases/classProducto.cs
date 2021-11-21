@@ -13,7 +13,7 @@ namespace GasolineraPUMA.Clases
         //LLamado de las variables segun la catidad en la tabla
         private int id_Producto;
         private int id_Categoria;
-        private int id_Proveedor;
+        private string id_Proveedor;
         private string nombre_Producto;
         private string descripcion_Producto;
         private decimal precio_Producto;
@@ -27,7 +27,7 @@ namespace GasolineraPUMA.Clases
         {
             id_Producto = 0;
             id_Categoria = 0;
-            id_Proveedor =  0;
+            id_Proveedor = "";
             nombre_Producto = "";
             descripcion_Producto = "";
             precio_Producto = 0;
@@ -35,10 +35,11 @@ namespace GasolineraPUMA.Clases
             conexion = new Conexion();
         }
 
-        public classProducto(decimal py, string nom, string mar, string ex) {
+        public classProducto(decimal py, string nom, string mar, string ex)
+        {
             id_Producto = 0;
             id_Categoria = 0;
-            id_Proveedor = 0;
+            id_Proveedor = "";
             precio_Producto = 0;
             conexion = new Conexion();
         }
@@ -54,7 +55,7 @@ namespace GasolineraPUMA.Clases
             get { return id_Categoria; }
             set { id_Categoria = value; }
         }
-        public int idProveedor
+        public string idProveedor
         {
             get { return id_Proveedor; }
             set { id_Proveedor = value; }
@@ -69,7 +70,7 @@ namespace GasolineraPUMA.Clases
             get { return descripcion_Producto; }
             set { descripcion_Producto = value; }
         }
-        public decimal precionPrducto
+        public decimal precioPrducto
         {
             get { return precio_Producto; }
             set { precio_Producto = value; }
@@ -91,7 +92,7 @@ namespace GasolineraPUMA.Clases
         public Boolean GuardarProducto()
         {
             Boolean dataQuery = false;
-            dataQuery = conexion.Ejecutar(string.Format("INSERT INTO producto (nombreProducto,descripcionProducto,idCategoria,idProveedor,precioProducto,cantidadProducto) VALUES({0},{1},{2},{3},{4},{5}) ",nombre_Producto,descripcion_Producto,id_Categoria,id_Proveedor,precio_Producto,cantidad_Producto));
+            dataQuery = conexion.Ejecutar(string.Format("INSERT INTO producto (idProducto, nombreProducto,descripcionProducto,idCategoria,idProveedor,precioProducto,cantidadProducto) VALUES({0},{1},{2},{3},{4},{5},{6}) ", 1, nombre_Producto, descripcion_Producto, id_Categoria, id_Proveedor, precio_Producto, cantidad_Producto));
             return dataQuery;
         }
 
@@ -99,14 +100,14 @@ namespace GasolineraPUMA.Clases
         public Boolean ModificarProducto()
         {
             Boolean dataQuery = false;
-            dataQuery = conexion.Ejecutar(string.Format("UPDATE producto SET nombreProducto = {0}, descripcionProducto = {1}, idCategoria = {2}, idProveedor = {3}, precioProducto = {4}, cantidadProducto = {5} WHERE idProducto = {6}",nombreProducto,descripcionProducto,idCategoria,idProveedor,precionPrducto,cantidadProducto,idProducto));
+            dataQuery = conexion.Ejecutar(string.Format("UPDATE producto SET nombreProducto = {0}, descripcionProducto = {1}, idCategoria = {2}, idProveedor = {3}, precioProducto = {4}, cantidadProducto = {5} WHERE idProducto = {6}", nombreProducto, descripcionProducto, idCategoria, idProveedor, precioPrducto, cantidadProducto, idProducto));
             return dataQuery;
         }
 
         public Boolean EliminarProducto()
         {
             Boolean dataQuery = false;
-            dataQuery = conexion.Ejecutar(string.Format("DELETE FROM producto WHERE idProducto = {0};",idProducto));
+            dataQuery = conexion.Ejecutar(string.Format("DELETE FROM producto WHERE idProducto = {0};", idProducto));
             return dataQuery;
         }
     }

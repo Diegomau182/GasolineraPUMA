@@ -56,19 +56,19 @@ using System.Data;
 
             }
         }
-        public DataTable consulta(string sql)
-        {
-            Establecerconexion();
-            DataTable t = new DataTable();
-            MySqlCommand comando = conexion.CreateCommand();
-            MySqlDataAdapter adaptador = new MySqlDataAdapter();
-            comando.Connection = conexion;
-            comando.CommandText = sql;
-            adaptador.SelectCommand = comando;
-            adaptador.Fill(t);
-            return t;
-        }
-        public Boolean Ejecutar(string sql)
+    public DataTable consulta(string sql)
+    {
+        Establecerconexion();
+        DataTable t = new DataTable();
+        MySqlCommand comando = conexion.CreateCommand();
+        MySqlDataAdapter adaptador = new MySqlDataAdapter();
+        comando.Connection = conexion;
+        comando.CommandText = sql;
+        adaptador.SelectCommand = comando;
+        adaptador.Fill(t);
+        return t;
+    }
+    public Boolean Ejecutar(string sql)
         {
         //Boolean r = false;
 
