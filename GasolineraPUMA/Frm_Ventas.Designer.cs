@@ -44,7 +44,7 @@ namespace GasolineraPUMA
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSalida = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.dvgFactura = new System.Windows.Forms.DataGridView();
@@ -56,21 +56,21 @@ namespace GasolineraPUMA
             // 
             // txtIdFactura
             // 
-            this.txtIdFactura.Location = new System.Drawing.Point(750, 95);
+            this.txtIdFactura.Location = new System.Drawing.Point(72, 192);
             this.txtIdFactura.Name = "txtIdFactura";
             this.txtIdFactura.Size = new System.Drawing.Size(126, 20);
             this.txtIdFactura.TabIndex = 2;
             // 
             // txtNombreCliente
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(750, 126);
+            this.txtNombreCliente.Location = new System.Drawing.Point(824, 259);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(126, 20);
+            this.txtNombreCliente.Size = new System.Drawing.Size(250, 20);
             this.txtNombreCliente.TabIndex = 4;
             // 
             // dateTime
             // 
-            this.dateTime.Location = new System.Drawing.Point(882, 110);
+            this.dateTime.Location = new System.Drawing.Point(820, 212);
             this.dateTime.Name = "dateTime";
             this.dateTime.Size = new System.Drawing.Size(189, 20);
             this.dateTime.TabIndex = 5;
@@ -78,9 +78,9 @@ namespace GasolineraPUMA
             // dtgrProducto
             // 
             this.dtgrProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgrProducto.Location = new System.Drawing.Point(799, 180);
+            this.dtgrProducto.Location = new System.Drawing.Point(772, 285);
             this.dtgrProducto.Name = "dtgrProducto";
-            this.dtgrProducto.Size = new System.Drawing.Size(126, 150);
+            this.dtgrProducto.Size = new System.Drawing.Size(178, 150);
             this.dtgrProducto.TabIndex = 6;
             this.dtgrProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgrProducto_CellClick);
             // 
@@ -90,7 +90,7 @@ namespace GasolineraPUMA
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(958, 180);
+            this.groupBox1.Location = new System.Drawing.Point(986, 285);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(118, 150);
             this.groupBox1.TabIndex = 7;
@@ -131,7 +131,7 @@ namespace GasolineraPUMA
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(821, 349);
+            this.txtCantidad.Location = new System.Drawing.Point(824, 454);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(126, 20);
             this.txtCantidad.TabIndex = 8;
@@ -139,7 +139,7 @@ namespace GasolineraPUMA
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(690, 98);
+            this.label2.Location = new System.Drawing.Point(12, 191);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 10;
@@ -149,7 +149,7 @@ namespace GasolineraPUMA
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(666, 129);
+            this.label3.Location = new System.Drawing.Point(740, 266);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 11;
@@ -158,7 +158,7 @@ namespace GasolineraPUMA
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(766, 352);
+            this.label4.Location = new System.Drawing.Point(769, 457);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 12;
@@ -167,7 +167,7 @@ namespace GasolineraPUMA
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(955, 90);
+            this.label5.Location = new System.Drawing.Point(893, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 13;
@@ -178,29 +178,31 @@ namespace GasolineraPUMA
             this.btnSalida.BackColor = System.Drawing.Color.Transparent;
             this.btnSalida.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalida.BackgroundImage")));
             this.btnSalida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSalida.Location = new System.Drawing.Point(1093, 12);
+            this.btnSalida.Location = new System.Drawing.Point(1097, 11);
             this.btnSalida.Name = "btnSalida";
             this.btnSalida.Size = new System.Drawing.Size(51, 56);
             this.btnSalida.TabIndex = 15;
             this.btnSalida.UseVisualStyleBackColor = false;
+            this.btnSalida.Click += new System.EventHandler(this.btnSalida_Click);
             // 
-            // button1
+            // btnLimpiar
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(1090, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 52);
-            this.button1.TabIndex = 20;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.BackgroundImage")));
+            this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiar.Location = new System.Drawing.Point(1082, 193);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(61, 52);
+            this.btnLimpiar.TabIndex = 20;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
             this.btnAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregar.BackgroundImage")));
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgregar.Location = new System.Drawing.Point(799, 388);
+            this.btnAgregar.Location = new System.Drawing.Point(772, 493);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(54, 40);
             this.btnAgregar.TabIndex = 21;
@@ -212,9 +214,9 @@ namespace GasolineraPUMA
             this.btnReporte.BackColor = System.Drawing.Color.Transparent;
             this.btnReporte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReporte.BackgroundImage")));
             this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReporte.Location = new System.Drawing.Point(1053, 388);
+            this.btnReporte.Location = new System.Drawing.Point(1026, 493);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(54, 40);
+            this.btnReporte.Size = new System.Drawing.Size(78, 77);
             this.btnReporte.TabIndex = 23;
             this.btnReporte.UseVisualStyleBackColor = false;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
@@ -222,9 +224,9 @@ namespace GasolineraPUMA
             // dvgFactura
             // 
             this.dvgFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgFactura.Location = new System.Drawing.Point(208, 158);
+            this.dvgFactura.Location = new System.Drawing.Point(15, 231);
             this.dvgFactura.Name = "dvgFactura";
-            this.dvgFactura.Size = new System.Drawing.Size(504, 189);
+            this.dvgFactura.Size = new System.Drawing.Size(648, 327);
             this.dvgFactura.TabIndex = 24;
             this.dvgFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgFactura_CellContentClick);
             // 
@@ -233,7 +235,7 @@ namespace GasolineraPUMA
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminar.Location = new System.Drawing.Point(882, 388);
+            this.btnEliminar.Location = new System.Drawing.Point(896, 493);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(54, 40);
             this.btnEliminar.TabIndex = 25;
@@ -250,7 +252,7 @@ namespace GasolineraPUMA
             this.Controls.Add(this.dvgFactura);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnSalida);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -290,7 +292,7 @@ namespace GasolineraPUMA
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSalida;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.DataGridView dvgFactura;

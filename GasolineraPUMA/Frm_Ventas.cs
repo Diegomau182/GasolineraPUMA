@@ -85,6 +85,9 @@ namespace GasolineraPUMA
             TraerId();
             CargarDatosproductos();
             ajustarTamañoProducto();
+            ajustarTamañoFactura();
+            dvgFactura.AllowUserToAddRows = false;
+            dvgFactura.Rows.Clear();
             txtNombreCliente.Text = "";
             txtCantidad.Text = " ";
         }
@@ -112,6 +115,16 @@ namespace GasolineraPUMA
             }
             ventas.IdFactura = Convert.ToInt32(txtIdFactura.Text);
             ventas.guardarventa();
+            foreach (DataGridViewRow dgvRenglon in dvgFactura.Rows)
+            {
+                ventas.IdProducto =Convert.ToInt32(dgvRenglon.Cells[0].Value.ToString());
+                ventas.Cantidades= Convert.ToInt32(dgvRenglon.Cells[2].Value.ToString());
+                ventas.Precio =  Convert.ToInt32(dgvRenglon.Cells[3].Value.ToString());
+                ventas.Subtotal = Convert.ToInt32(dgvRenglon.Cells[4].Value.ToString());
+
+                ventas.guardarDetalleVenta();
+
+            }
 
             MessageBox.Show("Factura Creada");
             Limpiar();
@@ -138,6 +151,16 @@ namespace GasolineraPUMA
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             dvgFactura.Rows.RemoveAt(Convert.ToInt32(fila));
+        }
+
+        private void btnSalida_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

@@ -106,5 +106,17 @@ namespace GasolineraPUMA.Clases
             }
 
         }
+        public Boolean guardarDetalleVenta()
+        {
+            if (conexion.Ejecutar(string.Format("INSERT INTO `detalleventa`(`idEncabezadoVenta`, `idProducto`, `cantidad`, `precio`, `subTotal`) VALUES ('{0}','{1}','{2}','{3}','{4}')", IdFactura, IdProducto,Cantidades,Precio,Subtotal)))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
     }
 }
