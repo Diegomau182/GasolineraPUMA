@@ -11,22 +11,23 @@ using System.Windows.Forms;
 
 namespace GasolineraPUMA
 {
-    public partial class Pro : Form
+    public partial class Producto : Form
     {
         //Validacion validar = new Validacion();
         private Conexion c;
         private classListadoProducto productos;
 
-        public Pro()
+        public Producto()
         {
             InitializeComponent();
             c = new Conexion();
+            //productos = new classProducto();
             productos = new classListadoProducto();
         }
 
         private void Frm_Productos_Load(object sender, EventArgs e)
         {
-            DataTable t1 = productos.SQL(String.Format("SELECT idCategoria, nombreCategoria FROM categoria ;"));
+            DataTable t1 = productos.SQL(String.Format("SELECT idCategoria, nombreCategoria FROM categoria;"));
             cmbx_Categoria.DataSource = null;
             cmbx_Categoria.DataSource = t1;
             cmbx_Categoria.DisplayMember = "nombreCategoria";
@@ -34,12 +35,12 @@ namespace GasolineraPUMA
             btn_LimpiarPantallaP.Visible = true;
 
             //falta el 2
-            //DataTable t2 = productos.SQL(String.Format("SELECT prov.nombreProveedor, prod.idProveedor FROM producto CROSS JOIN proveedor ;"));
-            //cmbx_Proveedor.DataSource = null;
-            //cmbx_Proveedor.DataSource = t1;
-            //cmbx_Proveedor.DisplayMember = "nombreProveedor";
-            //cmbx_Proveedor.ValueMember = "idProveedor";
-            //btn_LimpiarPantallaP.Visible = true;
+            DataTable t2 = productos.SQL(String.Format("SELECT nombreProveedor, RTNProveedor FROM proveedor;"));
+            cmbx_Proveedor.DataSource = null;
+            cmbx_Proveedor.DataSource = t2;
+            cmbx_Proveedor.DisplayMember = "nombreProveedor";
+            cmbx_Proveedor.ValueMember = "RTNProveedor";
+            btn_LimpiarPantallaP.Visible = true;
 
         }
         public void limpiarPantallaPro()
@@ -49,18 +50,17 @@ namespace GasolineraPUMA
             txt_DescProducto.Text = "";
             cmbx_Categoria.SelectedIndex = -1;
             cmbx_Proveedor.SelectedIndex = -1;
+            txt_PrecioProducto.Text = "";
             txt_CantidadProducto.Text = "";
         }
-        public void GuardarProductoGeneral()
+        public void GuardarProducto()
         {
-            txt_IDProducto.Enabled = true;
-            //btnbuscar.Enabled = true;
+            txt_IDProducto.Enabled = false;
             classProducto producto = new classProducto();
             producto.nombreProducto = txt_NombreProducto.Text;
             producto.descripcionProducto = txt_DescProducto.Text;
             producto.idCategoria = Convert.ToInt32(cmbx_Categoria.SelectedValue);
-            //producto.idProveedor = Convert.ToInt32(cmbx_Proveedor.SelectedValue);
-            producto.idProveedor = txt_Proveedor.Text;
+            producto.idProveedor = Convert.ToString(cmbx_Proveedor.SelectedValue);
             producto.precioPrducto = Convert.ToDecimal(txt_PrecioProducto.Text);
             producto.cantidadProducto = Convert.ToInt32(txt_CantidadProducto.Text);
             if (producto.GuardarProducto())
@@ -92,7 +92,7 @@ namespace GasolineraPUMA
             producto.nombreProducto = txt_NombreProducto.Text;
             producto.descripcionProducto = txt_DescProducto.Text;
             producto.idCategoria = Convert.ToInt32(cmbx_Categoria.SelectedValue);
-            //producto.idProveedor = Convert.ToInt32(cmbx_Proveedor.SelectedValue);
+            producto.idProveedor = Convert.ToString(cmbx_Proveedor.SelectedValue);
             producto.precioPrducto = Convert.ToDecimal(txt_PrecioProducto.Text);
             producto.cantidadProducto = Convert.ToInt32(txt_CantidadProducto.Text);
 
@@ -166,7 +166,7 @@ namespace GasolineraPUMA
 
         private void btn_Ingresar_Click(object sender, EventArgs e)
         {
-            GuardarProductoGeneral();
+            GuardarProducto();
         }
 
         private void btn_Salir_Click_1(object sender, EventArgs e)

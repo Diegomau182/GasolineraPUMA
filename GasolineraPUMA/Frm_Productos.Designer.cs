@@ -1,7 +1,7 @@
 ﻿
 namespace GasolineraPUMA
 {
-    partial class Pro
+    partial class Producto
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,14 @@ namespace GasolineraPUMA
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pro));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Producto));
             this.p_header = new System.Windows.Forms.Panel();
             this.btn_Salir = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txt_Proveedor = new System.Windows.Forms.TextBox();
             this.cmbx_Proveedor = new System.Windows.Forms.ComboBox();
             this.cmbx_Categoria = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_PrecioProducto = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_CantidadProducto = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -53,12 +50,16 @@ namespace GasolineraPUMA
             this.btn_Ingresar = new System.Windows.Forms.PictureBox();
             this.btn_Eliminar = new System.Windows.Forms.PictureBox();
             this.btn_LimpiarPantallaP = new System.Windows.Forms.PictureBox();
+            this.btn_Buscar = new System.Windows.Forms.PictureBox();
+            this.btn_Modificar = new System.Windows.Forms.PictureBox();
             this.p_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Ingresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Eliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_LimpiarPantallaP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Buscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Modificar)).BeginInit();
             this.SuspendLayout();
             // 
             // p_header
@@ -92,17 +93,10 @@ namespace GasolineraPUMA
             this.pictureBox1.TabIndex = 45;
             this.pictureBox1.TabStop = false;
             // 
-            // txt_Proveedor
-            // 
-            this.txt_Proveedor.Location = new System.Drawing.Point(325, 284);
-            this.txt_Proveedor.Name = "txt_Proveedor";
-            this.txt_Proveedor.Size = new System.Drawing.Size(100, 20);
-            this.txt_Proveedor.TabIndex = 88;
-            // 
             // cmbx_Proveedor
             // 
             this.cmbx_Proveedor.FormattingEnabled = true;
-            this.cmbx_Proveedor.Location = new System.Drawing.Point(455, 284);
+            this.cmbx_Proveedor.Location = new System.Drawing.Point(323, 283);
             this.cmbx_Proveedor.Name = "cmbx_Proveedor";
             this.cmbx_Proveedor.Size = new System.Drawing.Size(121, 21);
             this.cmbx_Proveedor.TabIndex = 87;
@@ -131,34 +125,6 @@ namespace GasolineraPUMA
             this.txt_PrecioProducto.Name = "txt_PrecioProducto";
             this.txt_PrecioProducto.Size = new System.Drawing.Size(100, 20);
             this.txt_PrecioProducto.TabIndex = 84;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(624, 143);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 30);
-            this.button1.TabIndex = 83;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(624, 204);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 56);
-            this.button2.TabIndex = 82;
-            this.button2.Text = "Modificar Producto";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -251,7 +217,7 @@ namespace GasolineraPUMA
             // btn_Ingresar
             // 
             this.btn_Ingresar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ingresar.Image")));
-            this.btn_Ingresar.Location = new System.Drawing.Point(203, 405);
+            this.btn_Ingresar.Location = new System.Drawing.Point(192, 405);
             this.btn_Ingresar.Name = "btn_Ingresar";
             this.btn_Ingresar.Size = new System.Drawing.Size(79, 71);
             this.btn_Ingresar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -262,9 +228,9 @@ namespace GasolineraPUMA
             // btn_Eliminar
             // 
             this.btn_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Eliminar.Image")));
-            this.btn_Eliminar.Location = new System.Drawing.Point(349, 405);
+            this.btn_Eliminar.Location = new System.Drawing.Point(307, 405);
             this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(76, 71);
+            this.btn_Eliminar.Size = new System.Drawing.Size(79, 71);
             this.btn_Eliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Eliminar.TabIndex = 90;
             this.btn_Eliminar.TabStop = false;
@@ -272,28 +238,47 @@ namespace GasolineraPUMA
             // btn_LimpiarPantallaP
             // 
             this.btn_LimpiarPantallaP.Image = ((System.Drawing.Image)(resources.GetObject("btn_LimpiarPantallaP.Image")));
-            this.btn_LimpiarPantallaP.Location = new System.Drawing.Point(493, 405);
+            this.btn_LimpiarPantallaP.Location = new System.Drawing.Point(537, 405);
             this.btn_LimpiarPantallaP.Name = "btn_LimpiarPantallaP";
-            this.btn_LimpiarPantallaP.Size = new System.Drawing.Size(68, 71);
+            this.btn_LimpiarPantallaP.Size = new System.Drawing.Size(79, 71);
             this.btn_LimpiarPantallaP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_LimpiarPantallaP.TabIndex = 91;
             this.btn_LimpiarPantallaP.TabStop = false;
             // 
-            // Pro
+            // btn_Buscar
+            // 
+            this.btn_Buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Buscar.Image")));
+            this.btn_Buscar.Location = new System.Drawing.Point(610, 88);
+            this.btn_Buscar.Name = "btn_Buscar";
+            this.btn_Buscar.Size = new System.Drawing.Size(51, 50);
+            this.btn_Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Buscar.TabIndex = 92;
+            this.btn_Buscar.TabStop = false;
+            // 
+            // btn_Modificar
+            // 
+            this.btn_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modificar.Image")));
+            this.btn_Modificar.Location = new System.Drawing.Point(422, 405);
+            this.btn_Modificar.Name = "btn_Modificar";
+            this.btn_Modificar.Size = new System.Drawing.Size(79, 71);
+            this.btn_Modificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Modificar.TabIndex = 93;
+            this.btn_Modificar.TabStop = false;
+            // 
+            // Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 510);
+            this.Controls.Add(this.btn_Modificar);
+            this.Controls.Add(this.btn_Buscar);
             this.Controls.Add(this.btn_LimpiarPantallaP);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_Ingresar);
-            this.Controls.Add(this.txt_Proveedor);
             this.Controls.Add(this.cmbx_Proveedor);
             this.Controls.Add(this.cmbx_Categoria);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_PrecioProducto);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txt_CantidadProducto);
             this.Controls.Add(this.label19);
@@ -306,7 +291,7 @@ namespace GasolineraPUMA
             this.Controls.Add(this.label27);
             this.Controls.Add(this.p_header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Pro";
+            this.Name = "Producto";
             this.Text = "Frm_Productos";
             this.Load += new System.EventHandler(this.Frm_Productos_Load);
             this.p_header.ResumeLayout(false);
@@ -315,6 +300,8 @@ namespace GasolineraPUMA
             ((System.ComponentModel.ISupportInitialize)(this.btn_Ingresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Eliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_LimpiarPantallaP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Buscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Modificar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,13 +310,10 @@ namespace GasolineraPUMA
         #endregion
         private System.Windows.Forms.Panel p_header;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txt_Proveedor;
         private System.Windows.Forms.ComboBox cmbx_Proveedor;
         private System.Windows.Forms.ComboBox cmbx_Categoria;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_PrecioProducto;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_CantidadProducto;
         private System.Windows.Forms.Label label19;
@@ -344,5 +328,7 @@ namespace GasolineraPUMA
         private System.Windows.Forms.PictureBox btn_Salir;
         private System.Windows.Forms.PictureBox btn_Eliminar;
         private System.Windows.Forms.PictureBox btn_LimpiarPantallaP;
+        private System.Windows.Forms.PictureBox btn_Buscar;
+        private System.Windows.Forms.PictureBox btn_Modificar;
     }
 }

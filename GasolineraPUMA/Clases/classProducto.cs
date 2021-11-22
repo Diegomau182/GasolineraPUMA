@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Data;
 
+using MySql.Data.MySqlClient;
+using System.Windows.Forms;
+
 namespace GasolineraPUMA.Clases
 {
     class classProducto
@@ -19,28 +22,30 @@ namespace GasolineraPUMA.Clases
         private decimal precio_Producto;
         private int cantidad_Producto;
         private Conexion conexion;
-        private DataTable tabla;
 
 
         //constructores 
         public classProducto()
         {
             id_Producto = 0;
+            nombre_Producto = string.Empty;
+            descripcion_Producto = string.Empty;
             id_Categoria = 0;
-            id_Proveedor = "";
-            nombre_Producto = "";
-            descripcion_Producto = "";
+            id_Proveedor = string.Empty;
             precio_Producto = 0;
             cantidad_Producto = 0;
             conexion = new Conexion();
         }
 
-        public classProducto(decimal py, string nom, string mar, string ex)
+        public classProducto(string nom, string des, string prov, decimal py)
         {
             id_Producto = 0;
+            nombreProducto = nom;
+            descripcionProducto = des;
             id_Categoria = 0;
-            id_Proveedor = "";
-            precio_Producto = 0;
+            id_Proveedor = prov;
+            precio_Producto = py;
+            cantidadProducto = 0;
             conexion = new Conexion();
         }
 
@@ -80,10 +85,6 @@ namespace GasolineraPUMA.Clases
             get { return cantidad_Producto; }
             set { cantidad_Producto = value; }
         }
-        public DataTable Tabla
-        {
-            get { return tabla; }
-        }
 
 
         //QUERYS DE GUARDAR,INSERTAR, MODIFICAR Y ELIMINAR
@@ -92,7 +93,7 @@ namespace GasolineraPUMA.Clases
         public Boolean GuardarProducto()
         {
             Boolean dataQuery = false;
-            dataQuery = conexion.Ejecutar(string.Format("INSERT INTO producto (idProducto, nombreProducto,descripcionProducto,idCategoria,idProveedor,precioProducto,cantidadProducto) VALUES({0},{1},{2},{3},{4},{5},{6}) ", 1, nombre_Producto, descripcion_Producto, id_Categoria, id_Proveedor, precio_Producto, cantidad_Producto));
+            dataQuery = conexion.Ejecutar(string.Format("INSERT INTO producto (nombreProducto,descripcionProducto,idCategoria,idProveedor,precioProducto,cantidadProducto) VALUES('{0}','{1}',{2},'{3}','{4}',{5}) ", nombre_Producto, descripcion_Producto, id_Categoria, id_Proveedor, precio_Producto, cantidad_Producto));
             return dataQuery;
         }
 

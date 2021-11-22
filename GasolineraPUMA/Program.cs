@@ -16,7 +16,7 @@ namespace GasolineraPUMA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pro());
+            Application.Run(new Producto());
         }
     }
 }
