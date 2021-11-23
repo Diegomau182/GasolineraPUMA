@@ -13,62 +13,62 @@ namespace GasolineraPUMA
 {
     public partial class Frm_BuscarProductos : Form
     {
-        private classListadoProducto pro;
-
         //Validacion v = new Validacion();
-        //claConexion2 conexion;
-        //private claProducto Productos;
-        //private claseListaPRoductos pro;
+        Conexion conexion;
+        private classProducto Productos;
+        private classListadoProducto listadoProduc;
 
         public Frm_BuscarProductos()
         {
             InitializeComponent();
-            //conexion = new Conexion();
-            //Productos = new classProducto();
-            pro = new classListadoProducto();
-            //conexion.Establecerconexion();
-        }
-
-        private void Frm_BuscarProductos_Load(object sender, EventArgs e)
-        {
-            CargarDatos();
+            conexion = new Conexion();
+            Productos = new classProducto();
+            listadoProduc = new classListadoProducto();
+            conexion.Establecerconexion();
         }
         private void CargarDatos()
         {
             string sql = "";
-
-
-            if (rbOtrosProductos.Checked)
-            {
-                sql = String.Format("SELECT id_producto , nombre FROM uma.producto where id_tipo_producto = 1 ;");
-            }
-            else if (rbRepuesto.Checked)
-            {
-                sql = String.Format("SELECT id_producto , nombre FROM uma.producto where id_tipo_producto = 2 ;");
-            }
-            else if (rbServicio.Checked)
-            {
-                sql = String.Format("SELECT id_producto , nombre FROM uma.producto where id_tipo_producto = 3 ;");
-            }
-            else
-            {
-                sql = String.Format("SELECT id_producto , nombre FROM uma.producto where habilitado = 1 ;");
-            }
-            DataTable t2 = pro.SQL(sql);
-            dgv_BuscarProducto.DataSource = null;
-            dgv_BuscarProducto.DataSource = t2;
-            dgv_BuscarProducto.Refresh();
+            sql = String.Format("SELECT idProducto, nombreProducto, descripcionProducto, idCategoria, idProveedor, precioProducto, cantidadProducto from producto;");
+            DataTable t2 = listadoProduc.SQL(sql);
+            dgvBuscarProducto.DataSource = null;
+            dgvBuscarProducto.DataSource = t2;
+            dgvBuscarProducto.Refresh();
 
         }
+         private void ajustarColumnas()
+        {
+            this.dgvBuscarProducto.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvBuscarProducto.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvBuscarProducto.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvBuscarProducto.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvBuscarProducto.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvBuscarProducto.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvBuscarProducto.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        
+
+        private void Frm_BuscarProductos_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+            ajustarColumnas();
+        }
+        
+
+        private void txtboxBuscarProducto_TextChanged(object sender, EventArgs e)
         {
             string sql = "";
-            sql = String.Format("SELECT id_producto , nombre FROM uma.producto where id_producto  like '%{0}%' or nombre like '%{0}%'", txtBuscar.Text);
-            DataTable t2 = pro.SQL(sql);
-            dgv_BuscarProducto.DataSource = null;
-            dgv_BuscarProducto.DataSource = t2;
-            dgv_BuscarProducto.Refresh();
+            sql = String.Format("SELECT  idProducto, nombreProducto, descripcionProducto, idCategoria, idProveedor, precioProducto, cantidadProducto FROM producto where idProducto like '%{0}%' or nombreProducto like '%{0}%'", txtboxBuscarProducto.Text);
+            DataTable t2 = listadoProduc.SQL(sql);
+            dgvBuscarProducto.DataSource = null;
+            dgvBuscarProducto.DataSource = t2;
+            dgvBuscarProducto.Refresh();
+        }
+
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            ///Formulario de agregar producto
         }
     }
 }
