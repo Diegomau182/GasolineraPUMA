@@ -15,11 +15,13 @@ namespace GasolineraPUMA
 {
     public partial class Frm_AgregarProveedores : Form
     {
+        private Clases.proveedor  prov;
         private Conexion c;
 
         public Frm_AgregarProveedores()
         {
             InitializeComponent();
+            prov = new Clases.proveedor();
             c = new Conexion();
 
         }
@@ -35,17 +37,19 @@ namespace GasolineraPUMA
         }
         public void guardarProveedor()
         {
-            proveedor prov = new proveedor();
             prov.RtnProveedor = txt_rtnPro.Text;
             prov.EmpresaProveedor = txt_empresaPro.Text;
             prov.NombreProveedor = txt_nombrePro.Text;
             prov.ApellidoProveedor = txt_apellidoPro.Text;
             prov.EmalProveedor = txt_correoPro.Text;
             prov.TelefonoProveedor = txt_telefonoPro.Text;
+            
             if(prov.GuardarProveedor())
             {
                 limpiarPantallaPro();
                 MessageBox.Show("Producto Guardado");
+                Form formulario = new Frm_ListaProveedores();
+                formulario.Show();
             }
             else
             {
@@ -64,6 +68,11 @@ namespace GasolineraPUMA
         }
 
         private void empresaPro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }

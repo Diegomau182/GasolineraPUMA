@@ -33,18 +33,19 @@ namespace GasolineraPUMA
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.txt_BuscarProv = new System.Windows.Forms.TextBox();
+            this.btn_buscarProv = new System.Windows.Forms.PictureBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_buscarProv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -78,15 +79,6 @@ namespace GasolineraPUMA
             this.dataGridView2.Size = new System.Drawing.Size(897, 113);
             this.dataGridView2.TabIndex = 2;
             // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(285, 223);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(828, 401);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -118,23 +110,32 @@ namespace GasolineraPUMA
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
             // 
-            // textBox2
+            // txt_BuscarProv
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(801, 191);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(273, 26);
-            this.textBox2.TabIndex = 7;
+            this.txt_BuscarProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_BuscarProv.Location = new System.Drawing.Point(801, 191);
+            this.txt_BuscarProv.Name = "txt_BuscarProv";
+            this.txt_BuscarProv.Size = new System.Drawing.Size(273, 26);
+            this.txt_BuscarProv.TabIndex = 7;
             // 
-            // pictureBox4
+            // btn_buscarProv
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1080, 191);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(28, 26);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
+            this.btn_buscarProv.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscarProv.Image")));
+            this.btn_buscarProv.Location = new System.Drawing.Point(1080, 191);
+            this.btn_buscarProv.Name = "btn_buscarProv";
+            this.btn_buscarProv.Size = new System.Drawing.Size(28, 26);
+            this.btn_buscarProv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_buscarProv.TabIndex = 8;
+            this.btn_buscarProv.TabStop = false;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(285, 263);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(823, 335);
+            this.dataGridView3.TabIndex = 9;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // Frm_ListaProveedores
             // 
@@ -143,12 +144,12 @@ namespace GasolineraPUMA
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1140, 636);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.btn_buscarProv);
+            this.Controls.Add(this.txt_BuscarProv);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
@@ -159,7 +160,8 @@ namespace GasolineraPUMA
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_buscarProv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,12 +172,12 @@ namespace GasolineraPUMA
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TextBox txt_BuscarProv;
+        private System.Windows.Forms.PictureBox btn_buscarProv;
+        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }
 

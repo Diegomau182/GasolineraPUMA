@@ -32,6 +32,16 @@ namespace GasolineraPUMA.Clases
             telefono_proveedor = "";
             conexion = new Conexion();
         }
+        public proveedor(string r, string e, string n, string a, string c, string t)
+        {
+            rtn_proveedor = r;
+            empresa_proveedor = e;
+            nombre_proveedor = n;
+            apellido_proveedor = a;
+            email_proveedor = c;
+            telefono_proveedor = t;
+            conexion = new Conexion();
+        }
 
         public string RtnProveedor
         {
@@ -108,9 +118,20 @@ namespace GasolineraPUMA.Clases
         {
             Boolean r = false;
 
-            r = conexion.Ejecutar(string.Format("INSERT INTO proveedor (RTNProveedor,empresaProveedor,nombreProveedor,apellidoProveedor,emailProveedor,telefonoProveedor) VALUES({0},{1},'{2}','{3}','{4}',{5});", rtn_proveedor, empresa_proveedor, nombre_proveedor, apellido_proveedor, email_proveedor, telefono_proveedor));
+            r = conexion.Ejecutar(string.Format("INSERT INTO proveedor (RTNProveedor,empresaProveedor,nombreProveedor,apellidoProveedor,emailProveedor,telefonoProveedor) " +
+                "VALUES('{0}','{1}','{2}','{3}','{4}','{5}');", rtn_proveedor, empresa_proveedor, nombre_proveedor, apellido_proveedor, email_proveedor, telefono_proveedor));
 
             return r;
         }
+        /*
+        public Boolean VerProveedores()
+
+        {
+            Boolean r = false;
+
+            r = conexion.Ejecutar(string.Format("SELECT  RTNProveedor,empresaProveedor,nombreProveedor,apellidoProveedor,emailProveedor,telefonoProveedor FROM proveedor "));
+
+            return r;
+        }*/
     }
 }
