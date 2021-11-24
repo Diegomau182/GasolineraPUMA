@@ -16,5 +16,11 @@ namespace GasolineraPUMA
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Frm_AgregarProveedores();
+            formulario.Show();
+        }
     }
 }

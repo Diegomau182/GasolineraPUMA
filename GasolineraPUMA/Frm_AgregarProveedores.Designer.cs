@@ -38,21 +38,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.txt_rtnPro = new System.Windows.Forms.TextBox();
+            this.txt_empresaPro = new System.Windows.Forms.TextBox();
+            this.txt_nombrePro = new System.Windows.Forms.TextBox();
+            this.txt_apellidoPro = new System.Windows.Forms.TextBox();
+            this.txt_correoPro = new System.Windows.Forms.TextBox();
+            this.txt_telefonoPro = new System.Windows.Forms.TextBox();
+            this.guardarPro = new System.Windows.Forms.PictureBox();
+            this.eliminarPro = new System.Windows.Forms.PictureBox();
+            this.limpiarP = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guardarPro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eliminarPro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiarP)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -91,9 +91,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(102, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 25);
+            this.label1.Size = new System.Drawing.Size(160, 25);
             this.label1.TabIndex = 3;
-            this.label1.Text = "ID Proveedor";
+            this.label1.Text = "RTN Proveedor";
             // 
             // label2
             // 
@@ -101,9 +101,10 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(102, 209);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 25);
+            this.label2.Size = new System.Drawing.Size(97, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Empresa";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -111,9 +112,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(102, 288);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 25);
+            this.label3.Size = new System.Drawing.Size(87, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Empresa";
+            this.label3.Text = "Nombre";
             // 
             // label4
             // 
@@ -121,9 +122,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(102, 363);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 25);
+            this.label4.Size = new System.Drawing.Size(89, 25);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Teléfono";
+            this.label4.Text = "Apellido";
             // 
             // label5
             // 
@@ -141,87 +142,89 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(102, 538);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 25);
+            this.label6.Size = new System.Drawing.Size(96, 25);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Dirección";
+            this.label6.Text = "Telefono";
             // 
-            // textBox1
+            // txt_rtnPro
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(305, 131);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(552, 31);
-            this.textBox1.TabIndex = 9;
+            this.txt_rtnPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_rtnPro.Location = new System.Drawing.Point(305, 131);
+            this.txt_rtnPro.Name = "txt_rtnPro";
+            this.txt_rtnPro.Size = new System.Drawing.Size(552, 31);
+            this.txt_rtnPro.TabIndex = 9;
             // 
-            // textBox2
+            // txt_empresaPro
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(305, 209);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(552, 31);
-            this.textBox2.TabIndex = 10;
+            this.txt_empresaPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_empresaPro.Location = new System.Drawing.Point(305, 209);
+            this.txt_empresaPro.Name = "txt_empresaPro";
+            this.txt_empresaPro.Size = new System.Drawing.Size(552, 31);
+            this.txt_empresaPro.TabIndex = 10;
+            this.txt_empresaPro.TextChanged += new System.EventHandler(this.empresaPro_TextChanged);
             // 
-            // textBox3
+            // txt_nombrePro
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(305, 288);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(552, 31);
-            this.textBox3.TabIndex = 11;
+            this.txt_nombrePro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombrePro.Location = new System.Drawing.Point(305, 288);
+            this.txt_nombrePro.Name = "txt_nombrePro";
+            this.txt_nombrePro.Size = new System.Drawing.Size(552, 31);
+            this.txt_nombrePro.TabIndex = 11;
             // 
-            // textBox4
+            // txt_apellidoPro
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(305, 357);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(552, 31);
-            this.textBox4.TabIndex = 12;
+            this.txt_apellidoPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellidoPro.Location = new System.Drawing.Point(305, 357);
+            this.txt_apellidoPro.Name = "txt_apellidoPro";
+            this.txt_apellidoPro.Size = new System.Drawing.Size(552, 31);
+            this.txt_apellidoPro.TabIndex = 12;
             // 
-            // textBox5
+            // txt_correoPro
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(305, 448);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(552, 31);
-            this.textBox5.TabIndex = 13;
+            this.txt_correoPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_correoPro.Location = new System.Drawing.Point(305, 448);
+            this.txt_correoPro.Name = "txt_correoPro";
+            this.txt_correoPro.Size = new System.Drawing.Size(552, 31);
+            this.txt_correoPro.TabIndex = 13;
             // 
-            // textBox6
+            // txt_telefonoPro
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(305, 532);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(552, 31);
-            this.textBox6.TabIndex = 14;
+            this.txt_telefonoPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_telefonoPro.Location = new System.Drawing.Point(305, 532);
+            this.txt_telefonoPro.Name = "txt_telefonoPro";
+            this.txt_telefonoPro.Size = new System.Drawing.Size(552, 31);
+            this.txt_telefonoPro.TabIndex = 14;
             // 
-            // pictureBox3
+            // guardarPro
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(974, 157);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(58, 54);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
+            this.guardarPro.Image = ((System.Drawing.Image)(resources.GetObject("guardarPro.Image")));
+            this.guardarPro.Location = new System.Drawing.Point(974, 157);
+            this.guardarPro.Name = "guardarPro";
+            this.guardarPro.Size = new System.Drawing.Size(58, 54);
+            this.guardarPro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guardarPro.TabIndex = 15;
+            this.guardarPro.TabStop = false;
+            this.guardarPro.Click += new System.EventHandler(this.guardarPro_Click);
             // 
-            // pictureBox4
+            // eliminarPro
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(974, 308);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(58, 54);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
+            this.eliminarPro.Image = ((System.Drawing.Image)(resources.GetObject("eliminarPro.Image")));
+            this.eliminarPro.Location = new System.Drawing.Point(974, 308);
+            this.eliminarPro.Name = "eliminarPro";
+            this.eliminarPro.Size = new System.Drawing.Size(58, 54);
+            this.eliminarPro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.eliminarPro.TabIndex = 16;
+            this.eliminarPro.TabStop = false;
             // 
-            // pictureBox5
+            // limpiarP
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(979, 470);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(53, 57);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
+            this.limpiarP.Image = ((System.Drawing.Image)(resources.GetObject("limpiarP.Image")));
+            this.limpiarP.Location = new System.Drawing.Point(979, 470);
+            this.limpiarP.Name = "limpiarP";
+            this.limpiarP.Size = new System.Drawing.Size(53, 57);
+            this.limpiarP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.limpiarP.TabIndex = 17;
+            this.limpiarP.TabStop = false;
             // 
             // Frm_AgregarProveedores
             // 
@@ -229,15 +232,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1140, 636);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.limpiarP);
+            this.Controls.Add(this.eliminarPro);
+            this.Controls.Add(this.guardarPro);
+            this.Controls.Add(this.txt_telefonoPro);
+            this.Controls.Add(this.txt_correoPro);
+            this.Controls.Add(this.txt_apellidoPro);
+            this.Controls.Add(this.txt_nombrePro);
+            this.Controls.Add(this.txt_empresaPro);
+            this.Controls.Add(this.txt_rtnPro);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -252,9 +255,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guardarPro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eliminarPro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiarP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,14 +274,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TextBox txt_rtnPro;
+        private System.Windows.Forms.TextBox txt_empresaPro;
+        private System.Windows.Forms.TextBox txt_nombrePro;
+        private System.Windows.Forms.TextBox txt_apellidoPro;
+        private System.Windows.Forms.TextBox txt_correoPro;
+        private System.Windows.Forms.TextBox txt_telefonoPro;
+        private System.Windows.Forms.PictureBox guardarPro;
+        private System.Windows.Forms.PictureBox eliminarPro;
+        private System.Windows.Forms.PictureBox limpiarP;
     }
 }
