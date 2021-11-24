@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GasolineraPUMA
+namespace GasolineraPUMA.img
 {
-    public partial class Form1 : Form
+    public partial class Frm_AgregrarProveedores : Form
     {
-        public Form1()
+        public Frm_AgregrarProveedores()
         {
             InitializeComponent();
         }

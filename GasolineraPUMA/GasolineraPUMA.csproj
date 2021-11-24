@@ -167,16 +167,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Conexion.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Frm_ListaProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Frm_ListaProveedores.Designer.cs">
+      <DependentUpon>Frm_ListaProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="img\Frm_AgregrarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="img\Frm_AgregrarProveedores.Designer.cs">
+      <DependentUpon>Frm_AgregrarProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_ListaProveedores.resx">
+      <DependentUpon>Frm_ListaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\Frm_AgregrarProveedores.resx">
+      <DependentUpon>Frm_AgregrarProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
