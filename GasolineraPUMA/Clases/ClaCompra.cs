@@ -14,6 +14,7 @@ namespace GasolineraPUMA.Clases
     class ClaCompra
     {
         //---------Encabezado compra-----------
+        private int idencabezado;
         private DateTime fecha;
         private string idProveedor;
         private decimal subtotal;
@@ -24,16 +25,10 @@ namespace GasolineraPUMA.Clases
 
         private int idProducto;
         private string nombreProducto;
-        private string descripcionProducto;
         private int idCategoria;
         private decimal precioProducto;
         private int cantidadProducto;
-        private int idencabezado;
-
-        private int comodin;
-        private string comodin2;
-
-        private int comodinID;
+        
 
 
         private Conexion conexion;
@@ -42,7 +37,6 @@ namespace GasolineraPUMA.Clases
 
         public ClaCompra()
         {
-            //--------Encabezado----------
             fecha = DateTime.Today;
             idProveedor = string.Empty;
             subtotal = 0;
@@ -52,7 +46,6 @@ namespace GasolineraPUMA.Clases
             //--------Detalle----------
             idProducto = 0;
             nombreProducto = string.Empty;
-            descripcionProducto = string.Empty;
             idCategoria = 0;
             precioProducto = 0;
             cantidadProducto = 0;
@@ -60,7 +53,7 @@ namespace GasolineraPUMA.Clases
             conexion = new Conexion();
         }
 
-        public ClaCompra(int id, DateTime fe, string idProv, decimal sub, decimal imp, decimal tot, int idPro, string nombre, string descripcion,
+        public ClaCompra(int id, DateTime fe, string idProv, decimal sub, decimal imp, decimal tot, int idPro, string nombre,
             int idCa, decimal precio, int cantidad)
         {
             //--------Encabezado----------
@@ -73,7 +66,6 @@ namespace GasolineraPUMA.Clases
             //--------Detalle----------
             idProducto = idPro;
             nombreProducto = nombre;
-            descripcionProducto = descripcion;
             idCategoria = idCa;
             precioProducto = precio;
             cantidadProducto = cantidad;
@@ -81,63 +73,43 @@ namespace GasolineraPUMA.Clases
             conexion = new Conexion();
         }
 
-        public int Comodin
-        {
-            get => comodin;
-            set
-            {
-                comodin = value;
-            }
-        }
-
-        public int ComodinID
-        {
-            get => comodinID;
-            set
-            {
-                comodinID = value;
-            }
-        }
-
-        public string Comodin2
-        {
-            get => comodin2;
-            set
-            {
-                comodin2 = value;
-            }
-        }
 
         //---------Encabezado compra-----------
+
+        public int IDEncabezado
+        {
+            get { return idencabezado; }
+            set { idencabezado = value; }
+        }
 
         public DateTime Fecha
         {
             get { return fecha; }
-            set { value = fecha; }
+            set { fecha = value; }
         }
 
         public string IDProveedor
         {
             get { return idProveedor; }
-            set { value = idProveedor; }
+            set { idProveedor = value; }
         }
 
         public decimal Subtotal
         {
             get { return subtotal; }
-            set { value = subtotal; }
+            set { subtotal = value ; }
         }
 
         public decimal Impuesto
         {
             get { return impuesto; }
-            set { value = impuesto; }
+            set { impuesto = value; }
         }
 
         public decimal Total
         {
             get { return total; }
-            set { value = total; }
+            set {total = value; }
         }
 
 
@@ -145,51 +117,41 @@ namespace GasolineraPUMA.Clases
         public int IDProducto
         {
             get { return idProducto; }
-            set { value = idProducto; }
+            set { idProducto = value; }
         }
 
         public string NombreProducto
         {
             get { return nombreProducto; }
-            set { value = nombreProducto; }
-        }
-
-        public string DescripcionProducto
-        {
-            get { return descripcionProducto; }
-            set { value = descripcionProducto; }
+            set { nombreProducto =value; }
         }
 
         public int IDCategoria
         {
             get => idCategoria;
-            set { value = idCategoria; }
+            set { idCategoria = value; }
         }
 
 
         public decimal PrecioProducto
         {
             get { return precioProducto; }
-            set { value = precioProducto; }
+            set { precioProducto = value; }
         }
 
         public int CantidadProducto
         {
             get { return cantidadProducto; }
-            set { value = cantidadProducto; }
+            set {cantidadProducto = value; }
         }
 
-        public int IDEncabezado
-        {
-            get { return idencabezado; }
-            set { value = idencabezado; }
-        }
+       
 
 
 
         public Boolean GuardarEncabezado()
         {
-            if (conexion.Ejecutar(string.Format("INSERT INTO dbpuma.encabezadocompra (idEncabezadoCompra, fecha, idProveedor, subtotal, impuesto, total) value('{0}','{1}','{2}','{3}','{4}','{5}')", IDEncabezado, Fecha, IDProveedor, Subtotal, Impuesto, Total)))
+            if (conexion.Ejecutar(string.Format("INSERT INTO dbpuma.encabezadocompra (idEncabezadoCompra, idProveedor, subtotal, impuesto, total) value('{0}','{1}','{2}','{3}','{4}')", IDEncabezado, IDProveedor, Subtotal, Impuesto, Total)))
             {
                 return true;
             }
