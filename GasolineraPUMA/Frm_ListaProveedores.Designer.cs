@@ -117,6 +117,7 @@ namespace GasolineraPUMA
             this.txt_BuscarProv.Name = "txt_BuscarProv";
             this.txt_BuscarProv.Size = new System.Drawing.Size(273, 26);
             this.txt_BuscarProv.TabIndex = 7;
+            this.txt_BuscarProv.TextChanged += new System.EventHandler(this.txt_BuscarProv_TextChanged);
             // 
             // btn_buscarProv
             // 
@@ -127,9 +128,11 @@ namespace GasolineraPUMA
             this.btn_buscarProv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_buscarProv.TabIndex = 8;
             this.btn_buscarProv.TabStop = false;
+            this.btn_buscarProv.Click += new System.EventHandler(this.btn_buscarProv_Click);
             // 
             // dataGridView3
             // 
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(285, 263);
             this.dataGridView3.Name = "dataGridView3";
@@ -154,7 +157,7 @@ namespace GasolineraPUMA
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
             this.Name = "Frm_ListaProveedores";
-            this.Text = "Form1";
+            this.Text = "Proveedores";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

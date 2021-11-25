@@ -47,12 +47,16 @@
             this.guardarPro = new System.Windows.Forms.PictureBox();
             this.eliminarPro = new System.Windows.Forms.PictureBox();
             this.limpiarP = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardarPro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eliminarPro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiarP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -216,16 +220,39 @@
             this.eliminarPro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.eliminarPro.TabIndex = 16;
             this.eliminarPro.TabStop = false;
+            this.eliminarPro.Click += new System.EventHandler(this.eliminarPro_Click);
             // 
             // limpiarP
             // 
             this.limpiarP.Image = ((System.Drawing.Image)(resources.GetObject("limpiarP.Image")));
-            this.limpiarP.Location = new System.Drawing.Point(979, 470);
+            this.limpiarP.Location = new System.Drawing.Point(974, 388);
             this.limpiarP.Name = "limpiarP";
             this.limpiarP.Size = new System.Drawing.Size(53, 57);
             this.limpiarP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.limpiarP.TabIndex = 17;
             this.limpiarP.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(974, 231);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(58, 54);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 18;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(872, 131);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(34, 31);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 20;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // Frm_AgregarProveedores
             // 
@@ -233,6 +260,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1140, 636);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.limpiarP);
             this.Controls.Add(this.eliminarPro);
             this.Controls.Add(this.guardarPro);
@@ -259,6 +288,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guardarPro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eliminarPro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiarP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,5 +315,7 @@
         private System.Windows.Forms.PictureBox guardarPro;
         private System.Windows.Forms.PictureBox eliminarPro;
         private System.Windows.Forms.PictureBox limpiarP;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

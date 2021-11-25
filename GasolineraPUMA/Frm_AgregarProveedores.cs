@@ -15,7 +15,7 @@ namespace GasolineraPUMA
 {
     public partial class Frm_AgregarProveedores : Form
     {
-        private Clases.proveedor  prov;
+        private Clases.proveedor prov;
         private Conexion c;
 
         public Frm_AgregarProveedores()
@@ -23,7 +23,6 @@ namespace GasolineraPUMA
             InitializeComponent();
             prov = new Clases.proveedor();
             c = new Conexion();
-
         }
 
         public void limpiarPantallaPro()
@@ -43,8 +42,8 @@ namespace GasolineraPUMA
             prov.ApellidoProveedor = txt_apellidoPro.Text;
             prov.EmalProveedor = txt_correoPro.Text;
             prov.TelefonoProveedor = txt_telefonoPro.Text;
-            
-            if(prov.GuardarProveedor())
+
+            if (prov.GuardarProveedor())
             {
                 limpiarPantallaPro();
                 MessageBox.Show("Producto Guardado");
@@ -57,8 +56,73 @@ namespace GasolineraPUMA
             }
         }
 
+        private void selectProveedor()
+        {
+           listaProveedores proveedor = new listaProveedores();
+
+            if (txt_rtnPro.Text == null)
+            {
+                MessageBox.Show("Debe ingresar el RTN del proveedor oara poder editarlo");
+            }
+            else
+            {
+                string rtn = txt_rtnPro.Text;
+                string sql = "";
+                sql = String.Format("SELECT RTNProveedor, empresaProveedor,nombreProveedor,apellidoProveedor,emailProveedor,telefonoProveedor FROM proveedor WHERE RTNProveedor = '{0}' AND habilitado = 1", rtn);
+                DataTable t2 = proveedor.SQL(sql);
+                txt_rtnPro.Text = t2.Rows[0].ItemArray[0].ToString();
+                txt_empresaPro.Text = t2.Rows[0].ItemArray[1].ToString();
+                txt_nombrePro.Text = t2.Rows[0].ItemArray[2].ToString();
+                txt_apellidoPro.Text = t2.Rows[0].ItemArray[3].ToString();
+                txt_correoPro.Text = t2.Rows[0].ItemArray[4].ToString();
+                txt_telefonoPro.Text = t2.Rows[0].ItemArray[5].ToString();
+            }
+        }
+        private void modificarProveedor()
+        {
+            listaProveedores proveedor = new listaProveedores();
+
+
+            prov.RtnProveedor = txt_rtnPro.Text;
+            prov.EmpresaProveedor = txt_empresaPro.Text;
+            prov.NombreProveedor = txt_nombrePro.Text;
+            prov.ApellidoProveedor = txt_apellidoPro.Text;
+            prov.EmalProveedor = txt_correoPro.Text;
+            prov.TelefonoProveedor = txt_telefonoPro.Text;
+
+            if (prov.ModificarProveedor())
+            {
+                MessageBox.Show("Proveedor ha sido modificado Correctamente");
+                limpiarPantallaPro();
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+
+
+        }
+
+        private void eliminarProveedor()
+        {
+            prov.RtnProveedor = txt_rtnPro.Text;
+
+
+            if (prov.EliminarProveedor())
+            {
+                MessageBox.Show("Proveedor ha sido eliminado Correctamente");
+                limpiarPantallaPro();
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+
+
+        }
         private void guardarPro_Click(object sender, EventArgs e)
         {
+
             guardarProveedor();
         }
 
@@ -76,5 +140,27 @@ namespace GasolineraPUMA
         {
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            modificarProveedor();
+            this.Close();
+        }
+
+        private void txtEditar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void eliminarPro_Click(object sender, EventArgs e)
+        {
+            eliminarProveedor();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            selectProveedor();
+        }
     }
 }
+
