@@ -143,5 +143,10 @@ namespace GasolineraPUMA
             txtBuscar.Text = string.Empty;
             Compras_Load();
         }
+
+        private void FmCompra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
