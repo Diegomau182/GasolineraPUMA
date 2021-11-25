@@ -189,7 +189,7 @@ namespace GasolineraPUMA.Clases
 
         public Boolean GuardarEncabezado()
         {
-            if (conexion.Ejecutar(string.Format("INSERT INTO encabezadocompra (fecha, idProveedor, subtotal, impuesto, total) value('{0}','{1}','{2}','{3}','{4}')", Fecha, IDProveedor, Subtotal, Impuesto, Total)))
+            if (conexion.Ejecutar(string.Format("INSERT INTO dbpuma.encabezadocompra (idEncabezadoCompra, fecha, idProveedor, subtotal, impuesto, total) value('{0}','{1}','{2}','{3}','{4}','{5}')", IDEncabezado, Fecha, IDProveedor, Subtotal, Impuesto, Total)))
             {
                 return true;
             }
@@ -201,7 +201,7 @@ namespace GasolineraPUMA.Clases
 
         public Boolean GuardarDetalleCompra()
         {
-            if (conexion.Ejecutar(string.Format("INSERT INTO dbpuma.detalle_compra(nombreProducto, idCategoria, precioProducto, cantidadProducto, idencabezado) value('{0}','{1}','{2}','{3}','{4}')", NombreProducto, IDCategoria, PrecioProducto, CantidadProducto, IDEncabezado)))
+            if (conexion.Ejecutar(string.Format("INSERT INTO dbpuma.detallecompra(nombreProducto, idCategoria, precioProducto, cantidadProducto, idencabezado) value('{0}','{1}','{2}','{3}','{4}')", NombreProducto, IDCategoria, PrecioProducto, CantidadProducto, IDEncabezado)))
             {
                 return true;
             }

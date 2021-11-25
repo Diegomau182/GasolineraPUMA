@@ -33,7 +33,7 @@ namespace GasolineraPUMA.Clases
             conexion.Establecerconexion();
             tabla = conexion.consulta(string.Format("Select e.idEncabezadoCompra, e.fecha, e.idProveedor, " +
                 " d.nombreProducto, d.idCategoria, d.precioProducto, d.cantidadProducto, e.subtotal, e.impuesto, e.total," +
-                "d.idencabezado FROM dbpuma.encabezadocompra AS e INNER JOIN dbpuma.detalle_compra AS d ON e.idEncabezadoCompra = d.idencabezado"));
+                "d.idencabezado FROM dbpuma.encabezadocompra AS e INNER JOIN dbpuma.detallecompra AS d ON e.idEncabezadoCompra = d.idencabezado"));
 
             foreach (DataRow f  in tabla.Rows)
             {

@@ -36,7 +36,7 @@ namespace GasolineraPUMA
         {
             DataTable t2 = compras.SQL(String.Format("Select e.idEncabezadoCompra, e.fecha, e.idProveedor, " +
                 " d.nombreProducto, d.idCategoria, d.precioProducto, d.cantidadProducto, e.subtotal, e.impuesto, e.total," +
-                "d.idencabezado FROM dbpuma.encabezadocompra AS e INNER JOIN dbpuma.detalle_compra AS d ON e.idEncabezadoCompra = d.idencabezado"));
+                "d.idencabezado FROM dbpuma.encabezadocompra AS e INNER JOIN dbpuma.detallecompra AS d ON e.idEncabezadoCompra = d.idencabezado"));
             //DataTable t2 = compras.SQL(String.Format("SELECT * FROM taller.vistacompraproducto;"));
             ListCompras.DataSource = null;
             ListCompras.DataSource = t2;
@@ -79,7 +79,7 @@ namespace GasolineraPUMA
 
         private void ListCompras_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataTable t3 = compras.SQL(String.Format("SELECT * FROM dbpuma.detalle_compra WHERE idencabezado LIKE '" + txtBuscar.Text + "'"));
+            DataTable t3 = compras.SQL(String.Format("SELECT * FROM dbpuma.detallecompra WHERE idencabezado LIKE '" + txtBuscar.Text + "'"));
             ListCompras.DataSource = null;
             ListCompras.DataSource = t3;
             ListCompras.Refresh();
@@ -125,7 +125,7 @@ namespace GasolineraPUMA
             {
                 DataTable t2 = compras.SQL(String.Format("Select e.idEncabezadoCompra, e.fecha, e.idProveedor, " +
                 " d.nombreProducto, d.idCategoria, d.precioProducto, d.cantidadProducto, e.subtotal, e.impuesto, e.total," +
-                "d.idencabezado FROM dbpuma.encabezadocompra AS e INNER JOIN dbpuma.detalle_compra AS d ON e.idEncabezadoCompra = d.idencabezado"));
+                "d.idencabezado FROM dbpuma.encabezadocompra AS e INNER JOIN dbpuma.detallecompra AS d ON e.idEncabezadoCompra = d.idencabezado"));
                 //DataTable t2 = compras.SQL(String.Format("SELECT * FROM taller.vistacompraproducto;"));
                 ListCompras.DataSource = null;
                 ListCompras.DataSource = t2;
