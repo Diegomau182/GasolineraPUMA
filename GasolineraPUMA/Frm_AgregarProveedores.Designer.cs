@@ -149,7 +149,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 25);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Telefono";
+            this.label6.Text = "Teléfono";
             // 
             // txt_rtnPro
             // 

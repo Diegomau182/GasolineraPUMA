@@ -169,6 +169,12 @@
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\listaProveedores.cs" />
     <Compile Include="Clases\proveedor.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_AgregarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
