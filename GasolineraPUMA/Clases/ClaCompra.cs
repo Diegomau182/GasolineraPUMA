@@ -14,8 +14,6 @@ namespace GasolineraPUMA.Clases
     class ClaCompra
     {
         //---------Encabezado compra-----------
-
-        private int idEncabezadoCompra;
         private DateTime fecha;
         private string idProveedor;
         private decimal subtotal;
@@ -28,7 +26,6 @@ namespace GasolineraPUMA.Clases
         private string nombreProducto;
         private string descripcionProducto;
         private int idCategoria;
-        private string proveedor;
         private decimal precioProducto;
         private int cantidadProducto;
         private int idencabezado;
@@ -46,7 +43,6 @@ namespace GasolineraPUMA.Clases
         public ClaCompra()
         {
             //--------Encabezado----------
-            idEncabezadoCompra = 0;
             fecha = DateTime.Today;
             idProveedor = string.Empty;
             subtotal = 0;
@@ -58,7 +54,6 @@ namespace GasolineraPUMA.Clases
             nombreProducto = string.Empty;
             descripcionProducto = string.Empty;
             idCategoria = 0;
-            proveedor = string.Empty;
             precioProducto = 0;
             cantidadProducto = 0;
             idencabezado = 0;
@@ -66,10 +61,9 @@ namespace GasolineraPUMA.Clases
         }
 
         public ClaCompra(int id, DateTime fe, string idProv, decimal sub, decimal imp, decimal tot, int idPro, string nombre, string descripcion,
-            int idCa, string prov, decimal precio, int cantidad, int IDE)
+            int idCa, decimal precio, int cantidad)
         {
             //--------Encabezado----------
-            idEncabezadoCompra = id;
             fecha = fe;
             idProveedor = idProv;
             subtotal = sub;
@@ -81,10 +75,9 @@ namespace GasolineraPUMA.Clases
             nombreProducto = nombre;
             descripcionProducto = descripcion;
             idCategoria = idCa;
-            proveedor = prov;
             precioProducto = precio;
             cantidadProducto = cantidad;
-            idencabezado = IDE;
+            idencabezado = id;
             conexion = new Conexion();
         }
 
@@ -116,12 +109,6 @@ namespace GasolineraPUMA.Clases
         }
 
         //---------Encabezado compra-----------
-
-        public int IDEncabezadoCompra
-        {
-            get { return idEncabezadoCompra; }
-            set { value = idEncabezadoCompra; }
-        }
 
         public DateTime Fecha
         {
@@ -175,15 +162,10 @@ namespace GasolineraPUMA.Clases
 
         public int IDCategoria
         {
-            get { return idCategoria; }
+            get => idCategoria;
             set { value = idCategoria; }
         }
 
-        public string Proveedor
-        {
-            get { return proveedor; }
-            set { value = proveedor; }
-        }
 
         public decimal PrecioProducto
         {
@@ -197,12 +179,41 @@ namespace GasolineraPUMA.Clases
             set { value = cantidadProducto; }
         }
 
-        public int IDEncabeado
+        public int IDEncabezado
         {
             get { return idencabezado; }
             set { value = idencabezado; }
         }
 
 
+
+        public Boolean GuardarEncabezado()
+        {
+            if (conexion.Ejecutar(string.Format("INSERT INTO dbpuma.encabezadocompra (fecha, idProveedor, subtotal, impuesto, total) value('{0}','{1}','{2}','{3}','{4}')", Fecha, IDProveedor, Subtotal, Impuesto, Total)))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public Boolean GuardarDetalleCompra()
+        {
+            if (conexion.Ejecutar(string.Format("INSERT INTO dbpuma.detalle_compra (nombreProducto, idCategoria, precioProducto, cantidadProducto, idencabezado) value('{0}','{1}','{2}','{3}','{4}')", NombreProducto, IDCategoria, PrecioProducto, CantidadProducto, IDEncabezado)))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public MySqlException Error
+        {
+            get { return error; }
+        }
     }
 }
