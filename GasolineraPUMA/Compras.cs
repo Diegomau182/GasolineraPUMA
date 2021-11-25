@@ -74,25 +74,21 @@ namespace GasolineraPUMA
         {
 
             DataTable t1 = compras.SQL(String.Format("SELECT idCategoria, nombreCategoria FROM  dbpuma.categoria"));
-            foreach (DataRow cate in t1.Rows)
-            {
-                txtCategoria.Items.Add(cate["idCategoria"].ToString());
-                txtCategoria.Items.IndexOf(cate["idCategoria"].ToString());
-
-            }
+            txtCategoria.DataSource = null;
+            txtCategoria.DataSource = t1;
+            txtCategoria.DisplayMember = "nombreCategoria";
+            txtCategoria.ValueMember = "idCategoria";
 
         }
 
         public void Datos_Proveedor()
         {
 
-            DataTable t1 = compras.SQL(String.Format("SELECT RTNProveedor, empresaProveedor FROM  dbpuma.proveedor"));
-            foreach (DataRow cate in t1.Rows)
-            {
-                txtProveedor.Items.Add(cate["RTNProveedor"].ToString());
-                txtProveedor.Items.IndexOf(cate["RTNProveedor"].ToString());
-
-            }
+            DataTable t2 = compras.SQL(String.Format("SELECT RTNProveedor, empresaProveedor FROM  dbpuma.proveedor"));
+            txtProveedor.DataSource = null;
+            txtProveedor.DataSource = t2;
+            txtProveedor.DisplayMember = "empresaProveedor";
+            txtProveedor.ValueMember = "RTNProveedor";
 
         }
 
@@ -178,6 +174,7 @@ namespace GasolineraPUMA
             Compra.Impuesto = Convert.ToDecimal(txtIVA.Text);
             Compra.Total = Convert.ToDecimal(txtTotal.Text);
             Compra.GuardarEncabezado();
+            /*
                 foreach (DataGridViewRow dgvRenglon in txtcompra.Rows)
             {
                 Compra.NombreProducto = Convert.ToString(dgvRenglon.Cells[0].Value.ToString());
@@ -188,7 +185,7 @@ namespace GasolineraPUMA
                 Compra.GuardarDetalleCompra();
 
             }
-
+            */
             MessageBox.Show("Factura Ingresada");
             Limpiar();
         }
