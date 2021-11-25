@@ -38,6 +38,7 @@ namespace GasolineraPUMA
             this.txtfecha = new System.Windows.Forms.DateTimePicker();
             this.txtcompra = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCategoria = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@ namespace GasolineraPUMA
             this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtProveedor = new System.Windows.Forms.ComboBox();
-            this.txtCategoria = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -124,7 +124,7 @@ namespace GasolineraPUMA
             this.txtNFactura.Location = new System.Drawing.Point(289, 153);
             this.txtNFactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtNFactura.Name = "txtNFactura";
-            this.txtNFactura.Size = new System.Drawing.Size(132, 22);
+            this.txtNFactura.Size = new System.Drawing.Size(186, 22);
             this.txtNFactura.TabIndex = 3;
             // 
             // label2
@@ -189,6 +189,14 @@ namespace GasolineraPUMA
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.FormattingEnabled = true;
+            this.txtCategoria.Location = new System.Drawing.Point(172, 89);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(732, 24);
+            this.txtCategoria.TabIndex = 11;
             // 
             // label13
             // 
@@ -428,14 +436,6 @@ namespace GasolineraPUMA
             this.txtProveedor.Name = "txtProveedor";
             this.txtProveedor.Size = new System.Drawing.Size(176, 24);
             this.txtProveedor.TabIndex = 10;
-            // 
-            // txtCategoria
-            // 
-            this.txtCategoria.FormattingEnabled = true;
-            this.txtCategoria.Location = new System.Drawing.Point(172, 89);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(732, 24);
-            this.txtCategoria.TabIndex = 11;
             // 
             // FmCompras
             // 

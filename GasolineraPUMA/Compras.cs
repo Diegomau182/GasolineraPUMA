@@ -32,7 +32,7 @@ namespace GasolineraPUMA
             compras = new Clases.ClaListaCompra();
             Compra = new Clases.ClaCompra();
 
-            TraerId();
+            //TraerId();
             Datos_Categoria();
             Datos_Proveedor();
             Bloqueartxt();
@@ -42,7 +42,7 @@ namespace GasolineraPUMA
 
         private void Bloqueartxt()
         {
-            txtNFactura.Enabled = false;
+            //txtNFactura.Enabled = false;
             txtSubtotal.Enabled = false;
             txtIVA.Enabled = false;
             txtTotal.Enabled = false;
@@ -53,6 +53,7 @@ namespace GasolineraPUMA
         {
             txtfecha.Value = DateTime.Today;
             txtNFactura.Focus();
+            txtNFactura.Text = string.Empty;
             txtProveedor.Text = string.Empty;
             txtproducto.Text = string.Empty;
             txtCategoria.Text = string.Empty;
@@ -136,12 +137,12 @@ namespace GasolineraPUMA
                 Limpiar();
         }
 
-        private void TraerId()
+       /* private void TraerId()
         {
             idFactura = Convert.ToInt32(c.consulta(string.Format("SELECT COUNT(idEncabezadoCompra) as numero FROM `encabezadocompra`;")).Rows[0][0].ToString());
             txtNFactura.Text = Convert.ToString(idFactura + 1);
             txtNFactura.Enabled = false;
-        }
+        }*/
 
         private void txtcompra_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -195,7 +196,7 @@ namespace GasolineraPUMA
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
-            Compra.IDEncabezado = Convert.ToInt32(txtNFactura.Text);
+            Compra.IDEncabezado = Convert.ToString(txtNFactura.Text);
             Compra.IDProveedor = Convert.ToString(txtProveedor.SelectedValue);
             Compra.Subtotal = Convert.ToDecimal(txtSubtotal.Text);
             Compra.Impuesto = Convert.ToDecimal(txtIVA.Text);

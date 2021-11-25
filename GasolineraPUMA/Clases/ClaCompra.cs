@@ -14,7 +14,7 @@ namespace GasolineraPUMA.Clases
     class ClaCompra
     {
         //---------Encabezado compra-----------
-        private int idencabezado;
+        private string idencabezado;
         private DateTime fecha;
         private string idProveedor;
         private decimal subtotal;
@@ -49,11 +49,11 @@ namespace GasolineraPUMA.Clases
             idCategoria = 0;
             precioProducto = 0;
             cantidadProducto = 0;
-            idencabezado = 0;
+            idencabezado = string.Empty;
             conexion = new Conexion();
         }
 
-        public ClaCompra(int id, DateTime fe, string idProv, decimal sub, decimal imp, decimal tot, int idPro, string nombre,
+        public ClaCompra(string id, DateTime fe, string idProv, decimal sub, decimal imp, decimal tot, int idPro, string nombre,
             int idCa, decimal precio, int cantidad)
         {
             //--------Encabezado----------
@@ -76,7 +76,7 @@ namespace GasolineraPUMA.Clases
 
         //---------Encabezado compra-----------
 
-        public int IDEncabezado
+        public string IDEncabezado
         {
             get { return idencabezado; }
             set { idencabezado = value; }

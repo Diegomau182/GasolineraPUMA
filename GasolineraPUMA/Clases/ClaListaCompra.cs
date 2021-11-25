@@ -38,7 +38,7 @@ namespace GasolineraPUMA.Clases
             foreach (DataRow f  in tabla.Rows)
             {
                 ClaCompra Cm = new ClaCompra();
-                Cm.IDEncabezado = f.Field<int>(0);
+                Cm.IDEncabezado = f.Field<string>(0);
                 Cm.Fecha = f.Field<DateTime>(1);
                 Cm.IDProveedor = f.Field<string>(2);
                 Cm.NombreProducto = f.Field<string>(3);
