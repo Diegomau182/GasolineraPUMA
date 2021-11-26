@@ -50,7 +50,7 @@ namespace GasolineraPUMA
             this.btnAgregarProducto.FlatAppearance.BorderSize = 0;
             this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarProducto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProducto.Location = new System.Drawing.Point(336, 210);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(336, 196);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(52, 49);
             this.btnAgregarProducto.TabIndex = 79;
@@ -125,11 +125,12 @@ namespace GasolineraPUMA
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCoral;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.BackgroundImage = global::GasolineraPUMA.Properties.Resources.logo;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Location = new System.Drawing.Point(1, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 699);
+            this.panel1.Size = new System.Drawing.Size(276, 699);
             this.panel1.TabIndex = 72;
             // 
             // panel2

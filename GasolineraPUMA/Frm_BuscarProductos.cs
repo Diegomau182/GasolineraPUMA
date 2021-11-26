@@ -29,7 +29,8 @@ namespace GasolineraPUMA
         private void CargarDatos()
         {
             string sql = "";
-            sql = String.Format("SELECT idProducto, nombreProducto, descripcionProducto, idCategoria, idProveedor, precioProducto, cantidadProducto from producto;");
+            sql = String.Format("SELECT producto.idProducto, producto.nombreProducto, producto.descripcionProducto, categoria.nombreCategoria, producto.cantidadProducto, producto.precioProducto FROM producto INNER JOIN categoria ON producto.idCategoria=categoria.idCategoria;");
+            //sql = String.Format("SELECT idProducto, nombreProducto, descripcionProducto, idCategoria, idProveedor, precioProducto, cantidadProducto from producto;");
             DataTable t2 = listadoProduc.SQL(sql);
             dgvBuscarProducto.DataSource = null;
             dgvBuscarProducto.DataSource = t2;
@@ -44,7 +45,7 @@ namespace GasolineraPUMA
             this.dgvBuscarProducto.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dgvBuscarProducto.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dgvBuscarProducto.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvBuscarProducto.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //this.dgvBuscarProducto.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         
@@ -59,11 +60,12 @@ namespace GasolineraPUMA
         private void txtboxBuscarProducto_TextChanged(object sender, EventArgs e)
         {
             string sql = "";
-            sql = String.Format("SELECT  idProducto, nombreProducto, descripcionProducto, idCategoria, idProveedor, precioProducto, cantidadProducto FROM producto where idProducto like '%{0}%' or nombreProducto like '%{0}%'", txtboxBuscarProducto.Text);
+            sql = String.Format("SELECT  idProducto, nombreProducto, descripcionProducto,idCategoria, precioProducto, cantidadProducto FROM producto WHERE idProducto LIKE'%{0}%' OR nombreProducto LIKE '%{0}%'", txtboxBuscarProducto.Text);
             DataTable t2 = listadoProduc.SQL(sql);
             dgvBuscarProducto.DataSource = null;
             dgvBuscarProducto.DataSource = t2;
             dgvBuscarProducto.Refresh();
+    
         }
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
