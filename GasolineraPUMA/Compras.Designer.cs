@@ -62,6 +62,8 @@ namespace GasolineraPUMA
             this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtProveedor = new System.Windows.Forms.ComboBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -159,6 +161,8 @@ namespace GasolineraPUMA
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtCodigo);
+            this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.txtCategoria);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
@@ -193,7 +197,7 @@ namespace GasolineraPUMA
             // txtCategoria
             // 
             this.txtCategoria.FormattingEnabled = true;
-            this.txtCategoria.Location = new System.Drawing.Point(172, 89);
+            this.txtCategoria.Location = new System.Drawing.Point(172, 140);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(732, 24);
             this.txtCategoria.TabIndex = 11;
@@ -352,7 +356,7 @@ namespace GasolineraPUMA
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(172, 196);
+            this.txtCantidad.Location = new System.Drawing.Point(172, 247);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(732, 22);
@@ -360,7 +364,7 @@ namespace GasolineraPUMA
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(172, 139);
+            this.txtPrecio.Location = new System.Drawing.Point(172, 190);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(732, 22);
@@ -368,7 +372,7 @@ namespace GasolineraPUMA
             // 
             // txtproducto
             // 
-            this.txtproducto.Location = new System.Drawing.Point(172, 33);
+            this.txtproducto.Location = new System.Drawing.Point(172, 84);
             this.txtproducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtproducto.Name = "txtproducto";
             this.txtproducto.Size = new System.Drawing.Size(732, 22);
@@ -378,7 +382,7 @@ namespace GasolineraPUMA
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(31, 191);
+            this.label6.Location = new System.Drawing.Point(31, 242);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 28);
@@ -389,7 +393,7 @@ namespace GasolineraPUMA
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 134);
+            this.label5.Location = new System.Drawing.Point(31, 185);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 28);
@@ -400,7 +404,7 @@ namespace GasolineraPUMA
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 82);
+            this.label4.Location = new System.Drawing.Point(31, 133);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 28);
@@ -411,7 +415,7 @@ namespace GasolineraPUMA
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 31);
+            this.label3.Location = new System.Drawing.Point(31, 82);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 28);
@@ -436,6 +440,27 @@ namespace GasolineraPUMA
             this.txtProveedor.Name = "txtProveedor";
             this.txtProveedor.Size = new System.Drawing.Size(176, 24);
             this.txtProveedor.TabIndex = 10;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(172, 33);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(732, 22);
+            this.txtCodigo.TabIndex = 23;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(31, 31);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(84, 28);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "Codigo";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // FmCompras
             // 
@@ -506,5 +531,7 @@ namespace GasolineraPUMA
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox txtCategoria;
         private System.Windows.Forms.ComboBox txtProveedor;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label label15;
     }
 }

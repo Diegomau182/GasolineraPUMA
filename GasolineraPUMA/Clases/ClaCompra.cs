@@ -22,8 +22,8 @@ namespace GasolineraPUMA.Clases
         private decimal total;
 
         //---------Detalle Compra--------------
-
         private int idProducto;
+        private int codigo;
         private string nombreProducto;
         private int idCategoria;
         private decimal precioProducto;
@@ -45,6 +45,7 @@ namespace GasolineraPUMA.Clases
 
             //--------Detalle----------
             idProducto = 0;
+            codigo = 0;
             nombreProducto = string.Empty;
             idCategoria = 0;
             precioProducto = 0;
@@ -53,7 +54,7 @@ namespace GasolineraPUMA.Clases
             conexion = new Conexion();
         }
 
-        public ClaCompra(string id, DateTime fe, string idProv, decimal sub, decimal imp, decimal tot, int idPro, string nombre,
+        public ClaCompra(string id, DateTime fe, string idProv, decimal sub, decimal imp, decimal tot, int idPro, int cod, string nombre,
             int idCa, decimal precio, int cantidad)
         {
             //--------Encabezado----------
@@ -65,6 +66,7 @@ namespace GasolineraPUMA.Clases
 
             //--------Detalle----------
             idProducto = idPro;
+            codigo = cod;
             nombreProducto = nombre;
             idCategoria = idCa;
             precioProducto = precio;
@@ -120,6 +122,12 @@ namespace GasolineraPUMA.Clases
             set { idProducto = value; }
         }
 
+        public int Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
+
         public string NombreProducto
         {
             get { return nombreProducto; }
@@ -163,7 +171,7 @@ namespace GasolineraPUMA.Clases
 
         public Boolean GuardarDetalleCompra()
         {
-            if (conexion.Ejecutar(string.Format("INSERT INTO dbpuma.detallecompra(nombreProducto, idCategoria, precioProducto, cantidadProducto, idencabezado) value('{0}','{1}','{2}','{3}','{4}')", NombreProducto, IDCategoria, PrecioProducto, CantidadProducto, IDEncabezado)))
+            if (conexion.Ejecutar(string.Format("INSERT INTO dbpuma.detallecompra(codigoProducto, nombreProducto, idCategoria, precioProducto, cantidadProducto, idencabezado) value('{0}','{1}','{2}','{3}','{4}','{5}')",Codigo, NombreProducto, IDCategoria, PrecioProducto, CantidadProducto, IDEncabezado)))
             {
                 return true;
             }
