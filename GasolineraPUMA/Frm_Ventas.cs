@@ -18,7 +18,7 @@ namespace GasolineraPUMA
         private int idFactura;
         private string nombreProducto;
         private int idProducto;
-        private float precio;
+        private decimal precio;
         private string fila;
         public Frm_Ventas()
         {
@@ -37,7 +37,7 @@ namespace GasolineraPUMA
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            float subtotal = Convert.ToInt32(txtCantidad.Text) * precio;
+            decimal subtotal = Convert.ToInt32(txtCantidad.Text) * precio;
             dvgFactura.Rows.Add(idProducto, nombreProducto, txtCantidad.Text, precio, subtotal);
 
             txtCantidad.Text = "";
@@ -119,8 +119,8 @@ namespace GasolineraPUMA
             {
                 ventas.IdProducto =Convert.ToInt32(dgvRenglon.Cells[0].Value.ToString());
                 ventas.Cantidades= Convert.ToInt32(dgvRenglon.Cells[2].Value.ToString());
-                ventas.Precio =  Convert.ToInt32(dgvRenglon.Cells[3].Value.ToString());
-                ventas.Subtotal = Convert.ToInt32(dgvRenglon.Cells[4].Value.ToString());
+                ventas.Precio =  Convert.ToDecimal(dgvRenglon.Cells[3].Value.ToString());
+                ventas.Subtotal = Convert.ToDecimal(dgvRenglon.Cells[4].Value.ToString());
 
                 ventas.guardarDetalleVenta();
 
@@ -134,7 +134,7 @@ namespace GasolineraPUMA
         {
             idProducto = Convert.ToInt32(dtgrProducto.CurrentRow.Cells[0].Value);
             nombreProducto = Convert.ToString(dtgrProducto.CurrentRow.Cells[1].Value);
-            precio = Convert.ToUInt32(dtgrProducto.CurrentRow.Cells[2].Value);
+            precio = Convert.ToDecimal(dtgrProducto.CurrentRow.Cells[2].Value);
         }
 
         private void dvgFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)

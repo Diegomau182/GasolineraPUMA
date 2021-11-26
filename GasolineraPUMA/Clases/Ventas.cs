@@ -9,8 +9,8 @@ namespace GasolineraPUMA.Clases
         private string nombre;
         private int idProducto;
         private int cantidad;
-        private float precio;
-        private float subTotal;
+        private decimal precio;
+        private decimal subTotal;
         private Conexion conexion;
        
         //Constructor
@@ -71,7 +71,7 @@ namespace GasolineraPUMA.Clases
                 idProducto = value;
             }
         }
-        public float Subtotal
+        public decimal Subtotal
         {
             get
             {
@@ -82,7 +82,7 @@ namespace GasolineraPUMA.Clases
                 subTotal = value;
             }
         }
-        public float Precio
+        public decimal Precio
         {
             get
             {
