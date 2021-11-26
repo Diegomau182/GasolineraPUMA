@@ -174,7 +174,9 @@ namespace GasolineraPUMA
             txtTotal.Text = Convert.ToString(tot);
 
             suma = 0;
-            
+            imp = 0;
+            tot = 0;
+
 
             LimpiarAlgunosCampos();
         }
@@ -195,6 +197,8 @@ namespace GasolineraPUMA
             txtTotal.Text = Convert.ToString(tot);
 
             suma = 0;
+            imp = 0;
+            tot = 0;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
