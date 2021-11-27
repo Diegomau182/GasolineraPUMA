@@ -20,6 +20,12 @@ namespace GasolineraPUMA
         private int idProducto;
         private decimal precio;
         private string fila;
+        private decimal total;
+        private decimal totalTotal;
+        private decimal subtotalEliminar;
+       
+        
+
         public Frm_Ventas()
         {
             InitializeComponent();
@@ -39,8 +45,11 @@ namespace GasolineraPUMA
         {
             decimal subtotal = Convert.ToInt32(txtCantidad.Text) * precio;
             dvgFactura.Rows.Add(idProducto, nombreProducto, txtCantidad.Text, precio, subtotal);
-
+            total = total + subtotal;
             txtCantidad.Text = "";
+            txtISV.Text = Convert.ToString(total * Convert.ToDecimal(0.15));
+            totalTotal = total - Convert.ToDecimal(txtISV.Text);
+            txtTotal.Text = Convert.ToString(totalTotal);
         }
         private void CargarDatosproductos()
         {
@@ -90,6 +99,9 @@ namespace GasolineraPUMA
             dvgFactura.Rows.Clear();
             txtNombreCliente.Text = "";
             txtCantidad.Text = " ";
+            txtTotal.Text = " ";
+            txtISV.Text = " ";
+
         }
 
         private void Frm_Ventas_Load(object sender, EventArgs e)
@@ -114,7 +126,10 @@ namespace GasolineraPUMA
                 ventas.Nombre = Convert.ToString(txtNombreCliente.Text);
             }
             ventas.IdFactura = Convert.ToInt32(txtIdFactura.Text);
+            ventas.ISV = Convert.ToDecimal(txtISV.Text);
+            ventas.Total = Convert.ToDecimal(txtTotal.Text);
             ventas.guardarventa();
+
             foreach (DataGridViewRow dgvRenglon in dvgFactura.Rows)
             {
                 ventas.IdProducto =Convert.ToInt32(dgvRenglon.Cells[0].Value.ToString());
@@ -139,8 +154,9 @@ namespace GasolineraPUMA
 
         private void dvgFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-             fila = " ";
+            fila = " ";
              fila = dvgFactura.CurrentCell.RowIndex.ToString();
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -151,9 +167,12 @@ namespace GasolineraPUMA
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             dvgFactura.Rows.RemoveAt(Convert.ToInt32(fila));
+            total = total - Convert.ToDecimal(subtotalEliminar);
+            txtISV.Text = Convert.ToString(total * Convert.ToDecimal(0.15));
+            totalTotal = total - Convert.ToDecimal(txtISV.Text);
+            txtTotal.Text = Convert.ToString(totalTotal);
         }
-
-        private void btnSalida_Click(object sender, EventArgs e)
+            private void btnSalida_Click(object sender, EventArgs e)
         {
 
         }
@@ -176,6 +195,16 @@ namespace GasolineraPUMA
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dvgFactura_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            subtotalEliminar = Convert.ToDecimal(dvgFactura.CurrentRow.Cells[4].Value.ToString());
         }
     }
 }

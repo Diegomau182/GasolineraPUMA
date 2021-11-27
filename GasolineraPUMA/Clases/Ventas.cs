@@ -11,6 +11,8 @@ namespace GasolineraPUMA.Clases
         private int cantidad;
         private decimal precio;
         private decimal subTotal;
+        private decimal total;
+        private decimal isv;
         private Conexion conexion;
        
         //Constructor
@@ -22,6 +24,8 @@ namespace GasolineraPUMA.Clases
             idProducto = 0;
             subTotal = 0;
             precio = 0;
+            total = 0;
+            isv = 0;
             conexion = new Conexion();
         }
       
@@ -94,9 +98,34 @@ namespace GasolineraPUMA.Clases
             }
         }
 
+        public decimal Total
+        {
+            get
+            {
+                return total;
+            }
+            set
+            {
+                total = value;
+            }
+        }
+
+        public decimal ISV
+        {
+            get
+            {
+                return isv;
+            }
+            set
+            {
+                isv = value;
+            }
+        }
+        
+
         public Boolean guardarventa()
         {
-            if (conexion.Ejecutar(string.Format("INSERT INTO `encabezadoventa`(`idEncabezadoVenta`, `cliente`) Values ('{0}','{1}')", IdFactura, Nombre)))
+            if (conexion.Ejecutar(string.Format("INSERT INTO `encabezadoventa`(`idEncabezadoVenta`, `cliente`, `isv`, `total`) VALUES ('{0}','{1}','{2}','{3}')", IdFactura, Nombre,ISV,Total)))
             {
                 return true;
             }

@@ -51,9 +51,9 @@ namespace GasolineraPUMA
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtISV = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrProducto)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -238,6 +238,7 @@ namespace GasolineraPUMA
             this.dvgFactura.Name = "dvgFactura";
             this.dvgFactura.Size = new System.Drawing.Size(1132, 151);
             this.dvgFactura.TabIndex = 24;
+            this.dvgFactura.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgFactura_CellClick);
             this.dvgFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgFactura_CellContentClick);
             // 
             // btnEliminar
@@ -274,13 +275,13 @@ namespace GasolineraPUMA
             this.label1.Text = "IVA";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txtISV
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(728, 372);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 20);
-            this.textBox1.TabIndex = 28;
+            this.txtISV.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtISV.Location = new System.Drawing.Point(728, 372);
+            this.txtISV.Name = "txtISV";
+            this.txtISV.Size = new System.Drawing.Size(179, 20);
+            this.txtISV.TabIndex = 28;
             // 
             // label6
             // 
@@ -291,13 +292,14 @@ namespace GasolineraPUMA
             this.label6.TabIndex = 29;
             this.label6.Text = "Total";
             // 
-            // textBox2
+            // txtTotal
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox2.Location = new System.Drawing.Point(728, 421);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 20);
-            this.textBox2.TabIndex = 30;
+            this.txtTotal.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtTotal.Location = new System.Drawing.Point(728, 421);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(179, 20);
+            this.txtTotal.TabIndex = 30;
+            this.txtTotal.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pictureBox1
             // 
@@ -318,9 +320,9 @@ namespace GasolineraPUMA
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1156, 675);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtISV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dvgFactura);
@@ -376,9 +378,9 @@ namespace GasolineraPUMA
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtISV;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
