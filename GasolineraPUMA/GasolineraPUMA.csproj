@@ -169,6 +169,7 @@
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\listaProveedores.cs" />
     <Compile Include="Clases\proveedor.cs" />
+    <Compile Include="Clases\Validaciones.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

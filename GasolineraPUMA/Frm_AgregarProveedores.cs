@@ -15,6 +15,8 @@ namespace GasolineraPUMA
 {
     public partial class Frm_AgregarProveedores : Form
     {
+        Validaciones v = new Validaciones();
+
         private Clases.proveedor prov;
         private Conexion c;
 
@@ -160,6 +162,26 @@ namespace GasolineraPUMA
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             selectProveedor();
+        }
+
+        private void txt_rtnPro_TextChanged(object sender, KeyPressEventArgs e)
+        {
+            v.soloNumeros(e);
+        }
+
+        private void txt_telefonoPro_TextChanged(object sender, KeyPressEventArgs e)
+        {
+            v.soloNumeros(e);
+        }
+
+        private void txt_nombrePro_TextChanged(object sender, KeyPressEventArgs e)
+        {
+            v.soloLetras(e);
+        }
+
+        private void txt_apellidoPro_TextChanged(object sender, KeyPressEventArgs e)
+        {
+            v.soloLetras(e);
         }
     }
 }

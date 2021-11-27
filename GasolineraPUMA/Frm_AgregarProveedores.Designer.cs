@@ -125,7 +125,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(102, 363);
+            this.label4.Location = new System.Drawing.Point(102, 373);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 25);
             this.label4.TabIndex = 6;
@@ -179,7 +179,7 @@
             // txt_apellidoPro
             // 
             this.txt_apellidoPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apellidoPro.Location = new System.Drawing.Point(305, 357);
+            this.txt_apellidoPro.Location = new System.Drawing.Point(305, 367);
             this.txt_apellidoPro.Name = "txt_apellidoPro";
             this.txt_apellidoPro.Size = new System.Drawing.Size(552, 31);
             this.txt_apellidoPro.TabIndex = 12;
