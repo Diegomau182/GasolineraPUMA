@@ -1,0 +1,62 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace GasolineraPUMA.Clases
+{
+    class Validaciones
+    {
+        public void soloLetras(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        public void soloNumeros(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+    }
+}

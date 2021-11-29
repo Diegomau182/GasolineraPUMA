@@ -32,12 +32,8 @@ namespace GasolineraPUMA
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Ventas));
             this.txtIdFactura = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.dateTime = new System.Windows.Forms.DateTimePicker();
+            this.Fecha = new System.Windows.Forms.DateTimePicker();
             this.dtgrProducto = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,8 +51,11 @@ namespace GasolineraPUMA
             this.label6 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrProducto)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,75 +74,32 @@ namespace GasolineraPUMA
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(250, 20);
             this.txtNombreCliente.TabIndex = 4;
+            this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
             // 
-            // dateTime
+            // Fecha
             // 
-            this.dateTime.Location = new System.Drawing.Point(801, 151);
-            this.dateTime.Name = "dateTime";
-            this.dateTime.Size = new System.Drawing.Size(189, 20);
-            this.dateTime.TabIndex = 5;
+            this.Fecha.Location = new System.Drawing.Point(801, 151);
+            this.Fecha.Name = "Fecha";
+            this.Fecha.Size = new System.Drawing.Size(189, 20);
+            this.Fecha.TabIndex = 5;
             // 
             // dtgrProducto
             // 
             this.dtgrProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgrProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgrProducto.Location = new System.Drawing.Point(85, 408);
+            this.dtgrProducto.Location = new System.Drawing.Point(119, 414);
             this.dtgrProducto.Name = "dtgrProducto";
-            this.dtgrProducto.Size = new System.Drawing.Size(204, 163);
+            this.dtgrProducto.Size = new System.Drawing.Size(334, 163);
             this.dtgrProducto.TabIndex = 6;
             this.dtgrProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgrProducto_CellClick);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(313, 408);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(123, 163);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 81);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(100, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Otros productos";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 58);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(60, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Aceites";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 35);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(66, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Gasolina";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(163, 369);
+            this.txtCantidad.Location = new System.Drawing.Point(243, 369);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(126, 20);
             this.txtCantidad.TabIndex = 8;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // label2
             // 
@@ -167,7 +123,7 @@ namespace GasolineraPUMA
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(93, 372);
+            this.label4.Location = new System.Drawing.Point(173, 372);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 12;
@@ -268,7 +224,7 @@ namespace GasolineraPUMA
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(698, 376);
+            this.label1.Location = new System.Drawing.Point(933, 369);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 27;
@@ -278,7 +234,7 @@ namespace GasolineraPUMA
             // txtISV
             // 
             this.txtISV.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtISV.Location = new System.Drawing.Point(728, 372);
+            this.txtISV.Location = new System.Drawing.Point(963, 365);
             this.txtISV.Name = "txtISV";
             this.txtISV.Size = new System.Drawing.Size(179, 20);
             this.txtISV.TabIndex = 28;
@@ -286,7 +242,7 @@ namespace GasolineraPUMA
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(698, 424);
+            this.label6.Location = new System.Drawing.Point(933, 417);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 29;
@@ -295,7 +251,7 @@ namespace GasolineraPUMA
             // txtTotal
             // 
             this.txtTotal.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtTotal.Location = new System.Drawing.Point(728, 421);
+            this.txtTotal.Location = new System.Drawing.Point(963, 414);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(179, 20);
             this.txtTotal.TabIndex = 30;
@@ -313,12 +269,52 @@ namespace GasolineraPUMA
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(607, 372);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "Limpiar";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(607, 437);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 13);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Quitar De la lista";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(607, 507);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 13);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Agregar Producto";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(601, 576);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(87, 13);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "Terminar Factura";
+            // 
             // Frm_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1156, 675);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label6);
@@ -335,19 +331,17 @@ namespace GasolineraPUMA
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtgrProducto);
-            this.Controls.Add(this.dateTime);
+            this.Controls.Add(this.Fecha);
             this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.txtIdFactura);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Ventas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Ventas";
             this.Load += new System.EventHandler(this.Frm_Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgrProducto)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgFactura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -359,12 +353,8 @@ namespace GasolineraPUMA
         #endregion
         private System.Windows.Forms.TextBox txtIdFactura;
         private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.DateTimePicker dateTime;
+        private System.Windows.Forms.DateTimePicker Fecha;
         private System.Windows.Forms.DataGridView dtgrProducto;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -382,5 +372,9 @@ namespace GasolineraPUMA
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

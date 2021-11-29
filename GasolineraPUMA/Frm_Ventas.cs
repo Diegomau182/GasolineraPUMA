@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GasolineraPUMA
@@ -15,6 +9,7 @@ namespace GasolineraPUMA
         private Clases.Ventas ventas;
         private Clases.TablaVentas tabla;
         private Conexion conexion;
+        private Clases.Validaciones validaciones;
         private int idFactura;
         private string nombreProducto;
         private int idProducto;
@@ -32,6 +27,7 @@ namespace GasolineraPUMA
             conexion = new Conexion();
             ventas = new Clases.Ventas();
             tabla = new Clases.TablaVentas();
+            validaciones = new Clases.Validaciones();
             conexion.Establecerconexion();
         }
 
@@ -43,6 +39,11 @@ namespace GasolineraPUMA
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (dtgrProducto.SelectedRows.Count == 0 || dtgrProducto.SelectedRows.Count > 1 || txtCantidad.Text == " ") 
+            {
+                MessageBox.Show("Debe selecionar solo un objeto y la cantidad debe ser mayor a 0 ", "Error");
+            }
+            else { 
             decimal subtotal = Convert.ToInt32(txtCantidad.Text) * precio;
             dvgFactura.Rows.Add(idProducto, nombreProducto, txtCantidad.Text, precio, subtotal);
             total = total + subtotal;
@@ -50,6 +51,7 @@ namespace GasolineraPUMA
             txtISV.Text = Convert.ToString(total * Convert.ToDecimal(0.15));
             totalTotal = total - Convert.ToDecimal(txtISV.Text);
             txtTotal.Text = Convert.ToString(totalTotal);
+             }
         }
         private void CargarDatosproductos()
         {
@@ -101,7 +103,10 @@ namespace GasolineraPUMA
             txtCantidad.Text = " ";
             txtTotal.Text = " ";
             txtISV.Text = " ";
-
+            txtTotal.ReadOnly = false;
+            txtISV.ReadOnly = false;
+            txtIdFactura.ReadOnly = false;
+            Fecha.Enabled = false;
         }
 
         private void Frm_Ventas_Load(object sender, EventArgs e)
@@ -117,32 +122,38 @@ namespace GasolineraPUMA
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            if (txtNombreCliente.Text == string.Empty)
-            {
-                ventas.Nombre ="Sin Nombre";
+            if (dvgFactura.Rows.Count == 0) {
+                MessageBox.Show("La factura debe tener mas de un producto agregado", "Error en crear Factura");
             }
             else
             {
-                ventas.Nombre = Convert.ToString(txtNombreCliente.Text);
+                if (txtNombreCliente.Text == string.Empty)
+                {
+                    ventas.Nombre = "Sin Nombre";
+                }
+                else
+                {
+                    ventas.Nombre = Convert.ToString(txtNombreCliente.Text);
+                }
+                ventas.IdFactura = Convert.ToInt32(txtIdFactura.Text);
+                ventas.ISV = Convert.ToDecimal(txtISV.Text);
+                ventas.Total = Convert.ToDecimal(txtTotal.Text);
+                ventas.guardarventa();
+
+                foreach (DataGridViewRow dgvRenglon in dvgFactura.Rows)
+                {
+                    ventas.IdProducto = Convert.ToInt32(dgvRenglon.Cells[0].Value.ToString());
+                    ventas.Cantidades = Convert.ToInt32(dgvRenglon.Cells[2].Value.ToString());
+                    ventas.Precio = Convert.ToDecimal(dgvRenglon.Cells[3].Value.ToString());
+                    ventas.Subtotal = Convert.ToDecimal(dgvRenglon.Cells[4].Value.ToString());
+
+                    ventas.guardarDetalleVenta();
+
+                }
+                MessageBox.Show("Factura Creada Sactifactoriamente", "Factura Creada");
+                Limpiar();
             }
-            ventas.IdFactura = Convert.ToInt32(txtIdFactura.Text);
-            ventas.ISV = Convert.ToDecimal(txtISV.Text);
-            ventas.Total = Convert.ToDecimal(txtTotal.Text);
-            ventas.guardarventa();
-
-            foreach (DataGridViewRow dgvRenglon in dvgFactura.Rows)
-            {
-                ventas.IdProducto =Convert.ToInt32(dgvRenglon.Cells[0].Value.ToString());
-                ventas.Cantidades= Convert.ToInt32(dgvRenglon.Cells[2].Value.ToString());
-                ventas.Precio =  Convert.ToDecimal(dgvRenglon.Cells[3].Value.ToString());
-                ventas.Subtotal = Convert.ToDecimal(dgvRenglon.Cells[4].Value.ToString());
-
-                ventas.guardarDetalleVenta();
-
-            }
-
-            MessageBox.Show("Factura Creada");
-            Limpiar();
+           
         }
 
         private void dtgrProducto_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -166,11 +177,17 @@ namespace GasolineraPUMA
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (dvgFactura.SelectedRows.Count == 0 || dvgFactura.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Debe selecionar mas una fila para que operacion pueda llevarse acabo", "Error");
+            } 
+            else { 
             dvgFactura.Rows.RemoveAt(Convert.ToInt32(fila));
             total = total - Convert.ToDecimal(subtotalEliminar);
             txtISV.Text = Convert.ToString(total * Convert.ToDecimal(0.15));
             totalTotal = total - Convert.ToDecimal(txtISV.Text);
             txtTotal.Text = Convert.ToString(totalTotal);
+            }
         }
             private void btnSalida_Click(object sender, EventArgs e)
         {
@@ -205,6 +222,16 @@ namespace GasolineraPUMA
         private void dvgFactura_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             subtotalEliminar = Convert.ToDecimal(dvgFactura.CurrentRow.Cells[4].Value.ToString());
+        }
+
+        private void txtNombreCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.soloLetras(e);
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.soloNumeros(e);
         }
     }
 }

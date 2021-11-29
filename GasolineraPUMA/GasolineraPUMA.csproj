@@ -228,6 +228,7 @@
   <ItemGroup>
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\TablaVentas.cs" />
+    <Compile Include="Clases\Validaciones.cs" />
     <Compile Include="Clases\Ventas.cs" />
     <Compile Include="Frm_Ventas.cs">
       <SubType>Form</SubType>
