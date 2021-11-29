@@ -62,5 +62,20 @@ namespace GasolineraPUMA.Clases
 
             }
         }
+
+        /*public bool IsValidEmail(KeyPressEventArgs e)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(e);
+                return addr.Address == e;
+            }
+            catch
+            {
+                return false;
+            }
+        }*/
+
+
     }
 }

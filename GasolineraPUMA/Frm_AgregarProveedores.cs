@@ -183,6 +183,11 @@ namespace GasolineraPUMA
         {
             v.soloLetras(e);
         }
+
+        /*private void txt_correoPro_TextChanged(object sender, KeyPressEventArgs e)
+        {
+            v.IsValidEmail(e);
+        }*/
     }
 }
 

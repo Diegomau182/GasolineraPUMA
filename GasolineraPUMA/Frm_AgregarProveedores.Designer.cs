@@ -203,7 +203,7 @@
             // guardarPro
             // 
             this.guardarPro.Image = ((System.Drawing.Image)(resources.GetObject("guardarPro.Image")));
-            this.guardarPro.Location = new System.Drawing.Point(974, 157);
+            this.guardarPro.Location = new System.Drawing.Point(974, 180);
             this.guardarPro.Name = "guardarPro";
             this.guardarPro.Size = new System.Drawing.Size(58, 54);
             this.guardarPro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,7 +214,7 @@
             // eliminarPro
             // 
             this.eliminarPro.Image = ((System.Drawing.Image)(resources.GetObject("eliminarPro.Image")));
-            this.eliminarPro.Location = new System.Drawing.Point(974, 308);
+            this.eliminarPro.Location = new System.Drawing.Point(974, 353);
             this.eliminarPro.Name = "eliminarPro";
             this.eliminarPro.Size = new System.Drawing.Size(58, 54);
             this.eliminarPro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -225,7 +225,7 @@
             // limpiarP
             // 
             this.limpiarP.Image = ((System.Drawing.Image)(resources.GetObject("limpiarP.Image")));
-            this.limpiarP.Location = new System.Drawing.Point(974, 388);
+            this.limpiarP.Location = new System.Drawing.Point(974, 438);
             this.limpiarP.Name = "limpiarP";
             this.limpiarP.Size = new System.Drawing.Size(53, 57);
             this.limpiarP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -235,7 +235,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(974, 231);
+            this.pictureBox3.Location = new System.Drawing.Point(974, 265);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 54);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
