@@ -70,7 +70,15 @@ namespace GasolineraPUMA
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
-            ///Formulario de agregar producto
+            Producto frmProduc = new Producto();
+            frmProduc.Show();
+            Visible = false;
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            Frm_ReporteProducto cambiarFrm = new Frm_ReporteProducto();
+            cambiarFrm.Show();
         }
     }
 }
