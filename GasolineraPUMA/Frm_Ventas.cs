@@ -116,6 +116,7 @@ namespace GasolineraPUMA
             dvgFactura.Columns.Add("cantidad", "Cantidad");
             dvgFactura.Columns.Add("precio", "Precio");
             dvgFactura.Columns.Add("subtotal", "subTotal");
+
             ajustarTamañoFactura();
             Limpiar();
         }
