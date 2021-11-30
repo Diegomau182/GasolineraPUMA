@@ -150,7 +150,19 @@ namespace GasolineraPUMA
                     ventas.guardarDetalleVenta();
 
                 }
-                MessageBox.Show("Factura Creada Sactifactoriamente", "Factura Creada");
+                DialogResult dr = MessageBox.Show("Desea Imprir la Factura",
+                      "Mood Test", MessageBoxButtons.YesNo);
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        MessageBox.Show("Factura Creada Sactifactoria mente","Se creo la factura");
+                        ImprimirFactura ImpFacu = new ImprimirFactura();
+                        ImpFacu.Show();
+                        break;
+                    case DialogResult.No:
+                        MessageBox.Show("Factura Creada Sactifactoria mente", "Se creo la factura");
+                        break;
+                }
                 Limpiar();
             }
            
