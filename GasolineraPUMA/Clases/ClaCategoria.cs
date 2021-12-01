@@ -85,7 +85,7 @@ namespace GasolineraPUMA.Clases
         /// </summary>
         public Boolean Eliminar()
         {
-            if (conexion.Ejecutar(string.Format("DELETE FROM dbPuma.categoria WHERE idcategoria={0}", IdCategoria)))
+            if (conexion.Ejecutar(string.Format("Update producto Set Habilitado = 0  WHERE idcategoria={0}", IdCategoria)))
             {
                 return true;
             }

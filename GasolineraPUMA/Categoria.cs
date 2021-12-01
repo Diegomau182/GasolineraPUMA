@@ -32,7 +32,7 @@ namespace GasolineraPUMA
 
         private void Categoria_Load_1(object sender, EventArgs e)
         {
-            DataTable t1 = categorias.SQL(String.Format("SELECT idCategoria, nombreCategoria, descripcionCategoria FROM dbPuma.categoria"));
+            DataTable t1 = categorias.SQL(String.Format("SELECT idCategoria, nombreCategoria, descripcionCategoria FROM dbPuma.categoria where Habilitado = 1"));
             dataGridView2.DataSource = null;
             dataGridView2.DataSource = t1;
             dataGridView2.Refresh();
@@ -297,6 +297,11 @@ namespace GasolineraPUMA
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
         }
