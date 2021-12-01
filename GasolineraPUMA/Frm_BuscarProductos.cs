@@ -29,7 +29,7 @@ namespace GasolineraPUMA
         private void CargarDatos()
         {
             string sql = "";
-            sql = String.Format("SELECT producto.idProducto, producto.nombreProducto, producto.descripcionProducto, categoria.nombreCategoria, producto.cantidadProducto, producto.precioProducto FROM producto INNER JOIN categoria ON producto.idCategoria=categoria.idCategoria where Habilitado = 1;");
+            sql = String.Format("SELECT producto.idProducto, producto.nombreProducto, producto.descripcionProducto, categoria.nombreCategoria, producto.cantidadProducto, producto.precioProducto FROM producto INNER JOIN categoria ON producto.idCategoria=categoria.idCategoria;");
             //sql = String.Format("SELECT idProducto, nombreProducto, descripcionProducto, idCategoria, idProveedor, precioProducto, cantidadProducto from producto;");
             DataTable t2 = listadoProduc.SQL(sql);
             dgvBuscarProducto.DataSource = null;
