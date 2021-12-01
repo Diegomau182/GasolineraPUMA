@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GasolineraPUMA.Clases
@@ -58,5 +62,20 @@ namespace GasolineraPUMA.Clases
 
             }
         }
+
+        /*public bool IsValidEmail(KeyPressEventArgs e)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(e);
+                return addr.Address == e;
+            }
+            catch
+            {
+                return false;
+            }
+        }*/
+
+
     }
 }

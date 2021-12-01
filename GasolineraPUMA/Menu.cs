@@ -75,5 +75,11 @@ namespace GasolineraPUMA
         {
             this.Close();
         }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Frm_ListaProveedores proveedoresLista = new Frm_ListaProveedores();
+            proveedoresLista.Show();
+        }
     }
 }

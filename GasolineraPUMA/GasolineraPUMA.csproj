@@ -232,6 +232,8 @@
     <Compile Include="Clases\classListadoProducto.cs" />
     <Compile Include="Clases\classProducto.cs" />
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\listaProveedores.cs" />
+    <Compile Include="Clases\proveedor.cs" />
     <Compile Include="Clases\TablaVentas.cs" />
     <Compile Include="Clases\Validaciones.cs" />
     <Compile Include="Clases\Ventas.cs" />
@@ -247,11 +249,23 @@
     <Compile Include="Compras.designer.cs">
       <DependentUpon>Compras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_AgregarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AgregarProveedores.designer.cs">
+      <DependentUpon>Frm_AgregarProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_BuscarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_BuscarProductos.designer.cs">
       <DependentUpon>Frm_BuscarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ListaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ListaProveedores.designer.cs">
+      <DependentUpon>Frm_ListaProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Productos.cs">
       <SubType>Form</SubType>
@@ -306,8 +320,14 @@
     <EmbeddedResource Include="Compras.resx">
       <DependentUpon>Compras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_AgregarProveedores.resx">
+      <DependentUpon>Frm_AgregarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_BuscarProductos.resx">
       <DependentUpon>Frm_BuscarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ListaProveedores.resx">
+      <DependentUpon>Frm_ListaProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Productos.resx">
       <DependentUpon>Frm_Productos.cs</DependentUpon>
