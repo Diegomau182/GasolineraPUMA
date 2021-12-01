@@ -176,6 +176,7 @@
     <Compile Include="Clases\classListadoProducto.cs" />
     <Compile Include="Clases\classProducto.cs" />
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\Validaciones.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

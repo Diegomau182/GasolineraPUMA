@@ -95,25 +95,27 @@ namespace GasolineraPUMA
             // 
             // cmbx_Proveedor
             // 
+            this.cmbx_Proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbx_Proveedor.FormattingEnabled = true;
-            this.cmbx_Proveedor.Location = new System.Drawing.Point(323, 283);
+            this.cmbx_Proveedor.Location = new System.Drawing.Point(219, 278);
             this.cmbx_Proveedor.Name = "cmbx_Proveedor";
-            this.cmbx_Proveedor.Size = new System.Drawing.Size(121, 21);
+            this.cmbx_Proveedor.Size = new System.Drawing.Size(201, 21);
             this.cmbx_Proveedor.TabIndex = 87;
             // 
             // cmbx_Categoria
             // 
+            this.cmbx_Categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbx_Categoria.FormattingEnabled = true;
-            this.cmbx_Categoria.Location = new System.Drawing.Point(324, 238);
+            this.cmbx_Categoria.Location = new System.Drawing.Point(219, 238);
             this.cmbx_Categoria.Name = "cmbx_Categoria";
-            this.cmbx_Categoria.Size = new System.Drawing.Size(121, 21);
+            this.cmbx_Categoria.Size = new System.Drawing.Size(201, 21);
             this.cmbx_Categoria.TabIndex = 86;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(197, 323);
+            this.label2.Location = new System.Drawing.Point(93, 318);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 85;
@@ -121,16 +123,17 @@ namespace GasolineraPUMA
             // 
             // txt_PrecioProducto
             // 
-            this.txt_PrecioProducto.Location = new System.Drawing.Point(324, 323);
+            this.txt_PrecioProducto.Location = new System.Drawing.Point(219, 318);
             this.txt_PrecioProducto.Name = "txt_PrecioProducto";
-            this.txt_PrecioProducto.Size = new System.Drawing.Size(100, 20);
+            this.txt_PrecioProducto.Size = new System.Drawing.Size(201, 20);
             this.txt_PrecioProducto.TabIndex = 84;
+            this.txt_PrecioProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_PrecioProducto_KeyPress);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(197, 284);
+            this.label12.Location = new System.Drawing.Point(93, 279);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(73, 16);
             this.label12.TabIndex = 78;
@@ -138,16 +141,17 @@ namespace GasolineraPUMA
             // 
             // txt_CantidadProducto
             // 
-            this.txt_CantidadProducto.Location = new System.Drawing.Point(325, 361);
+            this.txt_CantidadProducto.Location = new System.Drawing.Point(219, 355);
             this.txt_CantidadProducto.Name = "txt_CantidadProducto";
-            this.txt_CantidadProducto.Size = new System.Drawing.Size(100, 20);
+            this.txt_CantidadProducto.Size = new System.Drawing.Size(201, 20);
             this.txt_CantidadProducto.TabIndex = 77;
+            this.txt_CantidadProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CantidadProducto_KeyPress);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(198, 364);
+            this.label19.Location = new System.Drawing.Point(94, 359);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(70, 16);
             this.label19.TabIndex = 76;
@@ -157,7 +161,7 @@ namespace GasolineraPUMA
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(197, 244);
+            this.label21.Location = new System.Drawing.Point(93, 239);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(74, 16);
             this.label21.TabIndex = 75;
@@ -165,16 +169,18 @@ namespace GasolineraPUMA
             // 
             // txt_DescProducto
             // 
-            this.txt_DescProducto.Location = new System.Drawing.Point(323, 192);
+            this.txt_DescProducto.Location = new System.Drawing.Point(219, 161);
+            this.txt_DescProducto.Multiline = true;
             this.txt_DescProducto.Name = "txt_DescProducto";
-            this.txt_DescProducto.Size = new System.Drawing.Size(221, 20);
+            this.txt_DescProducto.Size = new System.Drawing.Size(199, 63);
             this.txt_DescProducto.TabIndex = 74;
+            this.txt_DescProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_DescProducto_KeyPress);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(197, 192);
+            this.label22.Location = new System.Drawing.Point(93, 161);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(85, 16);
             this.label22.TabIndex = 73;
@@ -182,16 +188,17 @@ namespace GasolineraPUMA
             // 
             // txt_NombreProducto
             // 
-            this.txt_NombreProducto.Location = new System.Drawing.Point(323, 149);
+            this.txt_NombreProducto.Location = new System.Drawing.Point(219, 118);
             this.txt_NombreProducto.Name = "txt_NombreProducto";
-            this.txt_NombreProducto.Size = new System.Drawing.Size(238, 20);
+            this.txt_NombreProducto.Size = new System.Drawing.Size(199, 20);
             this.txt_NombreProducto.TabIndex = 72;
+            this.txt_NombreProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NombreProducto_KeyPress);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(197, 149);
+            this.label23.Location = new System.Drawing.Point(93, 118);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(60, 16);
             this.label23.TabIndex = 71;
@@ -199,16 +206,17 @@ namespace GasolineraPUMA
             // 
             // txt_IDProducto
             // 
-            this.txt_IDProducto.Location = new System.Drawing.Point(321, 104);
+            this.txt_IDProducto.Location = new System.Drawing.Point(219, 76);
             this.txt_IDProducto.Name = "txt_IDProducto";
-            this.txt_IDProducto.Size = new System.Drawing.Size(100, 20);
+            this.txt_IDProducto.Size = new System.Drawing.Size(201, 20);
             this.txt_IDProducto.TabIndex = 70;
+            this.txt_IDProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IDProducto_KeyPress);
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(197, 107);
+            this.label27.Location = new System.Drawing.Point(93, 76);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(21, 16);
             this.label27.TabIndex = 69;
@@ -217,7 +225,7 @@ namespace GasolineraPUMA
             // btn_Ingresar
             // 
             this.btn_Ingresar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ingresar.Image")));
-            this.btn_Ingresar.Location = new System.Drawing.Point(192, 405);
+            this.btn_Ingresar.Location = new System.Drawing.Point(196, 417);
             this.btn_Ingresar.Name = "btn_Ingresar";
             this.btn_Ingresar.Size = new System.Drawing.Size(79, 71);
             this.btn_Ingresar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -228,42 +236,46 @@ namespace GasolineraPUMA
             // btn_Eliminar
             // 
             this.btn_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Eliminar.Image")));
-            this.btn_Eliminar.Location = new System.Drawing.Point(307, 405);
+            this.btn_Eliminar.Location = new System.Drawing.Point(422, 417);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(79, 71);
             this.btn_Eliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Eliminar.TabIndex = 90;
             this.btn_Eliminar.TabStop = false;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click_1);
             // 
             // btn_LimpiarPantallaP
             // 
             this.btn_LimpiarPantallaP.Image = ((System.Drawing.Image)(resources.GetObject("btn_LimpiarPantallaP.Image")));
-            this.btn_LimpiarPantallaP.Location = new System.Drawing.Point(537, 405);
+            this.btn_LimpiarPantallaP.Location = new System.Drawing.Point(541, 417);
             this.btn_LimpiarPantallaP.Name = "btn_LimpiarPantallaP";
             this.btn_LimpiarPantallaP.Size = new System.Drawing.Size(79, 71);
             this.btn_LimpiarPantallaP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_LimpiarPantallaP.TabIndex = 91;
             this.btn_LimpiarPantallaP.TabStop = false;
+            this.btn_LimpiarPantallaP.Click += new System.EventHandler(this.btn_LimpiarPantallaP_Click);
             // 
             // btn_Buscar
             // 
             this.btn_Buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Buscar.Image")));
-            this.btn_Buscar.Location = new System.Drawing.Point(610, 88);
+            this.btn_Buscar.Location = new System.Drawing.Point(541, 76);
             this.btn_Buscar.Name = "btn_Buscar";
             this.btn_Buscar.Size = new System.Drawing.Size(51, 50);
             this.btn_Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Buscar.TabIndex = 92;
             this.btn_Buscar.TabStop = false;
+            this.btn_Buscar.Click += new System.EventHandler(this.btn_Buscar_Click);
             // 
             // btn_Modificar
             // 
             this.btn_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modificar.Image")));
-            this.btn_Modificar.Location = new System.Drawing.Point(422, 405);
+            this.btn_Modificar.Location = new System.Drawing.Point(312, 417);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(79, 71);
             this.btn_Modificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Modificar.TabIndex = 93;
             this.btn_Modificar.TabStop = false;
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click_1);
             // 
             // Producto
             // 

@@ -13,7 +13,7 @@ namespace GasolineraPUMA
 {
     public partial class Producto : Form
     {
-        //Validacion validar = new Validacion();
+        Validaciones validar = new Validaciones();
         private Conexion c;
         private classListadoProducto productos;
 
@@ -21,26 +21,23 @@ namespace GasolineraPUMA
         {
             InitializeComponent();
             c = new Conexion();
-            //productos = new classProducto();
             productos = new classListadoProducto();
         }
 
         private void Frm_Productos_Load(object sender, EventArgs e)
         {
+            //Categoria
             DataTable t1 = productos.SQL(String.Format("SELECT idCategoria, nombreCategoria FROM categoria;"));
             cmbx_Categoria.DataSource = null;
             cmbx_Categoria.DataSource = t1;
             cmbx_Categoria.DisplayMember = "nombreCategoria";
             cmbx_Categoria.ValueMember = "idCategoria";
-            btn_LimpiarPantallaP.Visible = true;
 
-            //falta el 2
             DataTable t2 = productos.SQL(String.Format("SELECT nombreProveedor, RTNProveedor FROM proveedor;"));
             cmbx_Proveedor.DataSource = null;
             cmbx_Proveedor.DataSource = t2;
             cmbx_Proveedor.DisplayMember = "nombreProveedor";
             cmbx_Proveedor.ValueMember = "RTNProveedor";
-            btn_LimpiarPantallaP.Visible = true;
 
         }
         public void limpiarPantallaPro()
@@ -55,7 +52,7 @@ namespace GasolineraPUMA
         }
         public void GuardarProducto()
         {
-            txt_IDProducto.Enabled = false;
+            txt_IDProducto.Enabled = true;
             classProducto producto = new classProducto();
             producto.nombreProducto = txt_NombreProducto.Text;
             producto.descripcionProducto = txt_DescProducto.Text;
@@ -76,41 +73,54 @@ namespace GasolineraPUMA
                 MessageBox.Show("Error");
             }
         }
-        private void btn_Modificar_Click(object sender, EventArgs e)
+        public void llenarProducto()
         {
-            btn_Ingresar.Visible = false;
-            btn_Ingresar.Visible = true;
-            //btnCancelar.Visible = true;
-            btn_Eliminar.Visible = true;
-            //btnCancelar.Visible = true;
-            btn_LimpiarPantallaP.Visible = true;
-            txt_IDProducto.Visible = true;
-            btn_LimpiarPantallaP.Location = new Point(460, 290);
-            btn_LimpiarPantallaP.Text = "Limpiar Pantalla";
-            classProducto producto = new classProducto();
-            producto.idProducto = Convert.ToInt32(txt_IDProducto.Text);
-            producto.nombreProducto = txt_NombreProducto.Text;
-            producto.descripcionProducto = txt_DescProducto.Text;
-            producto.idCategoria = Convert.ToInt32(cmbx_Categoria.SelectedValue);
-            producto.idProveedor = Convert.ToString(cmbx_Proveedor.SelectedValue);
-            producto.precioPrducto = Convert.ToDecimal(txt_PrecioProducto.Text);
-            producto.cantidadProducto = Convert.ToInt32(txt_CantidadProducto.Text);
 
 
-            if (producto.ModificarProducto())
+            DataTable t1 = productos.SQL(String.Format("SELECT  nombreProducto, descripcionProducto, idCategoria, idProveedor, precioProducto, cantidadProducto FROM producto where idProducto = {0} ; ", txt_IDProducto.Text));
+            if (t1.Rows.Count != 0)
             {
-                MessageBox.Show("Producto Modificado", "Confirmacion", MessageBoxButtons.OK);
-                limpiarPantallaPro();
-                btn_Ingresar.Visible = true;
-
+                txt_NombreProducto.Text = t1.Rows[0]["nombreProducto"].ToString();
+                txt_DescProducto.Text = t1.Rows[0]["descripcionProducto"].ToString();
+                cmbx_Categoria.SelectedValue = t1.Rows[0]["idCategoria"].ToString();
+                cmbx_Proveedor.SelectedValue = t1.Rows[0]["idProveedor"].ToString();
+                txt_PrecioProducto.Text = t1.Rows[0]["precioProducto"].ToString();
+                txt_CantidadProducto.Text = t1.Rows[0]["cantidadProducto"].ToString();
             }
             else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("El producto no existe");
+            }
+
+
+
+        }
+        private void btn_Ingresar_Click(object sender, EventArgs e)
+        {
+            GuardarProducto();
+        }
+
+        private void btn_Salir_Click_1(object sender, EventArgs e)
+        {
+            //Form formulario = new Menu();
+            //formulario.Show();
+            Visible = false;
+        }
+
+        private void btn_Buscar_Click(object sender, EventArgs e)
+        {
+            if (txt_IDProducto.Text != "")
+            {
+                llenarProducto();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese el producto a buscar");
             }
 
         }
-        private void btn_Eliminar_Click(object sender, EventArgs e)
+
+        private void btn_Eliminar_Click_1(object sender, EventArgs e)
         {
             if (txt_IDProducto.Text == "")
             {
@@ -126,8 +136,6 @@ namespace GasolineraPUMA
                 {
                     MessageBox.Show("Producto Eliminado", "Confirmacion", MessageBoxButtons.OK);
                     limpiarPantallaPro();
-                    btn_Ingresar.Visible = true;
-
                 }
                 else
                 {
@@ -135,46 +143,60 @@ namespace GasolineraPUMA
                 }
 
             }
-            btn_Ingresar.Visible = false;
-            btn_Ingresar.Visible = true;
-            //btnCancelar.Visible = true;
-            btn_Eliminar.Visible = true;
-            //btnCancelar.Visible = true;
-            btn_LimpiarPantallaP.Visible = true;
-            txt_IDProducto.Visible = true;
-            btn_LimpiarPantallaP.Location = new Point(460, 290);
-            btn_LimpiarPantallaP.Text = "Limpiar Pantalla";
         }
-        private void btn_LimpiarPantalla_Click(object sender, EventArgs e)
+
+        private void btn_Modificar_Click_1(object sender, EventArgs e)
         {
+            classProducto producto = new classProducto();
+            producto.idProducto = Convert.ToInt32(txt_IDProducto.Text);
+            producto.nombreProducto = txt_NombreProducto.Text;
+            producto.descripcionProducto = txt_DescProducto.Text;
+            producto.idCategoria = Convert.ToInt32(cmbx_Categoria.SelectedValue);
+            producto.idProveedor = Convert.ToString(cmbx_Proveedor.SelectedValue);
+            producto.precioPrducto = Convert.ToDecimal(txt_PrecioProducto.Text);
+            producto.cantidadProducto = Convert.ToInt32(txt_CantidadProducto.Text);
 
-            if (btn_LimpiarPantallaP.Text == "Cancelar")
+
+            if (producto.ModificarProducto())
             {
+                MessageBox.Show("Producto Modificado", "Confirmacion", MessageBoxButtons.OK);
                 limpiarPantallaPro();
-                btn_Ingresar.Visible = true;
-                btn_LimpiarPantallaP.Location = new Point(460, 290);
-                btn_LimpiarPantallaP.Text = "Limpiar Pantalla";
-
             }
             else
             {
-                limpiarPantallaPro();
+                MessageBox.Show("Error");
             }
-
         }
 
-
-        private void btn_Ingresar_Click(object sender, EventArgs e)
+        private void btn_LimpiarPantallaP_Click(object sender, EventArgs e)
         {
-            GuardarProducto();
+            limpiarPantallaPro();
         }
 
-        private void btn_Salir_Click_1(object sender, EventArgs e)
+        //Validaciones
+        private void txt_IDProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Form formulario = new Menu();
-            //formulario.Show();
-            Visible = false;
+            validar.soloNumeros(e);
         }
 
+        private void txt_NombreProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloLetras(e);
+        }
+
+        private void txt_DescProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txt_PrecioProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txt_CantidadProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
     }
 }

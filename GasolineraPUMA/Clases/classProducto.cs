@@ -101,7 +101,7 @@ namespace GasolineraPUMA.Clases
         public Boolean ModificarProducto()
         {
             Boolean dataQuery = false;
-            dataQuery = conexion.Ejecutar(string.Format("UPDATE producto SET nombreProducto = {0}, descripcionProducto = {1}, idCategoria = {2}, idProveedor = {3}, precioProducto = {4}, cantidadProducto = {5} WHERE idProducto = {6}", nombreProducto, descripcionProducto, idCategoria, idProveedor, precioPrducto, cantidadProducto, idProducto));
+            dataQuery = conexion.Ejecutar(string.Format("UPDATE producto SET nombreProducto = '{0}', descripcionProducto = '{1}', idCategoria = {2}, idProveedor = '{3}', precioProducto = '{4}', cantidadProducto = {5} WHERE idProducto = {6}", nombreProducto, descripcionProducto, idCategoria, idProveedor, precioPrducto, cantidadProducto, idProducto));
             return dataQuery;
         }
 
