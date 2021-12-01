@@ -204,7 +204,10 @@ namespace GasolineraPUMA
         }
             private void btnSalida_Click(object sender, EventArgs e)
         {
-
+            Frm_Ventas ventas = new Frm_Ventas();
+            ventas.Close();
+            Menu menu = new Menu();
+            menu.Show();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -245,6 +248,11 @@ namespace GasolineraPUMA
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             validaciones.soloNumeros(e);
+        }
+
+        private void btnSalida_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

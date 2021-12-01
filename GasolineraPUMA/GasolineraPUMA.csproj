@@ -226,11 +226,25 @@
       <DependentUpon>Categoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\ClaCategoria.cs" />
+    <Compile Include="Clases\ClaCompra.cs" />
     <Compile Include="Clases\ClaListaCategorias.cs" />
+    <Compile Include="Clases\ClaListaCompra.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\TablaVentas.cs" />
     <Compile Include="Clases\Validaciones.cs" />
     <Compile Include="Clases\Ventas.cs" />
+    <Compile Include="Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compra.designer.cs">
+      <DependentUpon>Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras.designer.cs">
+      <DependentUpon>Compras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +257,12 @@
     <Compile Include="ImprimirFactura.Designer.cs">
       <DependentUpon>ImprimirFactura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportes\Factura.cs">
@@ -253,6 +273,18 @@
     </Compile>
     <EmbeddedResource Include="Categoria.resx">
       <DependentUpon>Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compra.resx">
+      <DependentUpon>Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras.resx">
+      <DependentUpon>Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Ventas.resx">
+      <DependentUpon>Frm_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -286,19 +318,26 @@
     <Content Include="img\boton-agregar.png" />
     <Content Include="img\boton-editar.png" />
     <Content Include="img\buscar.png" />
+    <Content Include="img\cancelar.png" />
+    <Content Include="img\Compras.png" />
     <Content Include="img\dinero-en-efectivo.png" />
     <Content Include="img\eliminar.png" />
+    <Content Include="img\en-espera.png" />
     <Content Include="img\estacion-de-gasolina.png" />
     <Content Include="img\guardar-el-archivo.png" />
     <Content Include="img\inventario %281%29.png" />
     <Content Include="img\limpiar.png" />
     <Content Include="img\logo.jpeg" />
+    <Content Include="img\logoGSM.png" />
     <Content Include="img\mas.png" />
     <Content Include="img\metodo-de-pago.png" />
     <Content Include="img\proveedor %281%29.png" />
     <Content Include="img\proveedor.png" />
     <Content Include="img\reporte.png" />
     <Content Include="img\salida.png" />
+    <Content Include="img\seleccionar.png" />
+    <None Include="img\Ventas.png" />
+    <Content Include="img\WhatsApp Image 2021-11-17 at 11.23.01 PM.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
