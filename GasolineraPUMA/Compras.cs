@@ -156,29 +156,34 @@ namespace GasolineraPUMA
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
-            precio = Convert.ToUInt32(txtPrecio.Text);
-            subtotal = Convert.ToInt32(txtCantidad.Text) * precio;
-            txtcompra.Rows.Add(txtCodigo.Text, txtproducto.Text, txtCategoria.SelectedValue, txtCantidad.Text, txtPrecio.Text, subtotal);
-
-            foreach (DataGridViewRow dgvRenglon in txtcompra.Rows)
-            {
-                double su = Convert.ToDouble(dgvRenglon.Cells[5].Value.ToString());
-                suma = suma + su;
-                imp = suma * 0.15;
-                tot = suma + imp;
+            if (txtCantidad.Text == string.Empty || txtCodigo.Text == string.Empty || txtproducto.Text == string.Empty || txtPrecio.Text == string.Empty) {
+                MessageBox.Show("Debe llenar todos los campos", "Error en agregar");
             }
+            else
+            {
+                precio = Convert.ToUInt32(txtPrecio.Text);
+                subtotal = Convert.ToInt32(txtCantidad.Text) * precio;
+                txtcompra.Rows.Add(txtCodigo.Text, txtproducto.Text, txtCategoria.SelectedValue, txtCantidad.Text, txtPrecio.Text, subtotal);
 
-            txtIVA.Text = Convert.ToString(imp);
-            txtSubtotal.Text = Convert.ToString(suma);
-            txtTotal.Text = Convert.ToString(tot);
+                foreach (DataGridViewRow dgvRenglon in txtcompra.Rows)
+                {
+                    double su = Convert.ToDouble(dgvRenglon.Cells[5].Value.ToString());
+                    suma = suma + su;
+                    imp = suma * 0.15;
+                    tot = suma + imp;
+                }
 
-            suma = 0;
-            imp = 0;
-            tot = 0;
+                txtIVA.Text = Convert.ToString(imp);
+                txtSubtotal.Text = Convert.ToString(suma);
+                txtTotal.Text = Convert.ToString(tot);
+
+                suma = 0;
+                imp = 0;
+                tot = 0;
 
 
-            LimpiarAlgunosCampos();
+                LimpiarAlgunosCampos();
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -203,27 +208,34 @@ namespace GasolineraPUMA
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
-            Compra.IDEncabezado = Convert.ToString(txtNFactura.Text);
-            Compra.IDProveedor = Convert.ToString(txtProveedor.SelectedValue);
-            Compra.Subtotal = Convert.ToDecimal(txtSubtotal.Text);
-            Compra.Impuesto = Convert.ToDecimal(txtIVA.Text);
-            Compra.Total = Convert.ToDecimal(txtTotal.Text);
-            Compra.GuardarEncabezado();
-            foreach (DataGridViewRow dgvRenglon in txtcompra.Rows)
-            {
-                Compra.Codigo = Convert.ToInt32(dgvRenglon.Cells[0].Value.ToString());
-                Compra.NombreProducto = Convert.ToString(dgvRenglon.Cells[1].Value.ToString());
-                Compra.IDCategoria = Convert.ToInt32(dgvRenglon.Cells[2].Value.ToString());
-                Compra.PrecioProducto = Convert.ToDecimal(dgvRenglon.Cells[3].Value.ToString());
-                Compra.CantidadProducto = Convert.ToInt32(dgvRenglon.Cells[4].Value.ToString());
-
-
-                Compra.GuardarDetalleCompra();
-
+            if (txtNFactura.Text == string.Empty || txtcompra.Rows.Count == 0) {
+                MessageBox.Show("Debe ingresar el numero de la Factura y la compra no debe ir vacia", "Error en guardar");
             }
-            MessageBox.Show("Factura Ingresada");
-            Limpiar();
+            else
+            {
+
+                Compra.IDEncabezado = Convert.ToString(txtNFactura.Text);
+                Compra.IDProveedor = Convert.ToString(txtProveedor.SelectedValue);
+                Compra.Subtotal = Convert.ToDecimal(txtSubtotal.Text);
+                Compra.Impuesto = Convert.ToDecimal(txtIVA.Text);
+                Compra.Total = Convert.ToDecimal(txtTotal.Text);
+                Compra.GuardarEncabezado();
+
+                foreach (DataGridViewRow dgvRenglon in txtcompra.Rows)
+                {
+                    Compra.Codigo = Convert.ToInt32(dgvRenglon.Cells[0].Value.ToString());
+                    Compra.NombreProducto = Convert.ToString(dgvRenglon.Cells[1].Value.ToString());
+                    Compra.IDCategoria = Convert.ToInt32(dgvRenglon.Cells[2].Value.ToString());
+                    Compra.PrecioProducto = Convert.ToDecimal(dgvRenglon.Cells[4].Value.ToString());
+                    Compra.CantidadProducto = Convert.ToInt32(dgvRenglon.Cells[3].Value.ToString());
+
+
+                    Compra.GuardarDetalleCompra();
+
+                }
+                MessageBox.Show("Productos ingresados","Guardado Correcto");
+                Limpiar();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

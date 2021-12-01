@@ -171,7 +171,7 @@ namespace GasolineraPUMA.Clases
 
         public Boolean GuardarDetalleCompra()
         {
-            if (conexion.Ejecutar(string.Format("INSERT INTO dbpuma.detallecompra(codigoProducto, nombreProducto, idCategoria, precioProducto, cantidadProducto, idencabezado, idProveedor) value('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",Codigo, NombreProducto, IDCategoria, PrecioProducto, CantidadProducto, IDEncabezado, IDProveedor)))
+            if (conexion.Ejecutar(string.Format("INSERT INTO dbpuma.detallecompra(codigoProducto, nombreProducto, idCategoria, precioProducto, cantidadProducto, idencabezado) value('{0}','{1}','{2}','{3}','{4}','{5}')",Codigo, NombreProducto, IDCategoria, PrecioProducto, CantidadProducto, IDEncabezado)))
             {
                 return true;
             }
