@@ -30,7 +30,8 @@ namespace GasolineraPUMA
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-           
+            Frm_BuscarProductos frm_Buscar = new Frm_BuscarProductos();
+            frm_Buscar.Show();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
