@@ -30,10 +30,7 @@ namespace GasolineraPUMA
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ListCompras = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,15 +38,16 @@ namespace GasolineraPUMA
             this.btnCancelar = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListCompras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,20 +59,9 @@ namespace GasolineraPUMA
             this.panel1.Size = new System.Drawing.Size(200, 637);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GasolineraPUMA.Properties.Resources.logoGSM;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 159);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(187, 285);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnSalir);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(200, 42);
@@ -82,28 +69,6 @@ namespace GasolineraPUMA
             this.panel2.Size = new System.Drawing.Size(940, 100);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GasolineraPUMA.Properties.Resources.salida;
-            this.pictureBox1.Location = new System.Drawing.Point(761, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Image = global::GasolineraPUMA.Properties.Resources.salida;
-            this.btnSalir.Location = new System.Drawing.Point(837, 27);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(100, 50);
-            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSalir.TabIndex = 1;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label1
             // 
@@ -145,6 +110,7 @@ namespace GasolineraPUMA
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Image = global::GasolineraPUMA.Properties.Resources.cancelar;
             this.btnCancelar.Location = new System.Drawing.Point(1089, 174);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(48, 34);
@@ -155,6 +121,7 @@ namespace GasolineraPUMA
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Image = global::GasolineraPUMA.Properties.Resources.buscar;
             this.btnBuscar.Location = new System.Drawing.Point(1037, 174);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(48, 34);
@@ -174,12 +141,33 @@ namespace GasolineraPUMA
             this.btnAgregar.TabStop = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Image = global::GasolineraPUMA.Properties.Resources.salida;
+            this.btnSalir.Location = new System.Drawing.Point(837, 27);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(100, 50);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSalir.TabIndex = 1;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::GasolineraPUMA.Properties.Resources.logoGSM;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 159);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(187, 285);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
             // FmCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1040, 636);
+            this.ClientSize = new System.Drawing.Size(1156, 675);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
@@ -194,15 +182,14 @@ namespace GasolineraPUMA
             this.Text = "Compra";
             this.Load += new System.EventHandler(this.FmCompra_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListCompras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,6 +208,5 @@ namespace GasolineraPUMA
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox btnCancelar;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

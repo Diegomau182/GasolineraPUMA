@@ -76,7 +76,7 @@ namespace GasolineraPUMA
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(244, 25);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(897, 113);
+            this.dataGridView2.Size = new System.Drawing.Size(914, 113);
             this.dataGridView2.TabIndex = 2;
             // 
             // pictureBox1
@@ -94,7 +94,7 @@ namespace GasolineraPUMA
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1080, 54);
+            this.pictureBox2.Location = new System.Drawing.Point(1091, 54);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +150,7 @@ namespace GasolineraPUMA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1140, 636);
+            this.ClientSize = new System.Drawing.Size(1156, 675);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.btn_buscarProv);
             this.Controls.Add(this.txt_BuscarProv);

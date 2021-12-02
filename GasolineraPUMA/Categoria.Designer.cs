@@ -71,9 +71,9 @@
             this.panel5.Controls.Add(this.txtNombreCategoria);
             this.panel5.Controls.Add(this.lbIdCategoria);
             this.panel5.Controls.Add(this.txtIdCategoria);
-            this.panel5.Location = new System.Drawing.Point(0, 99);
+            this.panel5.Location = new System.Drawing.Point(-1, 99);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(562, 535);
+            this.panel5.Size = new System.Drawing.Size(574, 574);
             this.panel5.TabIndex = 19;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -115,7 +115,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(16, 188);
+            this.label8.Location = new System.Drawing.Point(28, 188);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 22);
             this.label8.TabIndex = 40;
@@ -189,11 +189,11 @@
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridView2.Location = new System.Drawing.Point(561, 99);
+            this.dataGridView2.Location = new System.Drawing.Point(570, 99);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(579, 535);
+            this.dataGridView2.Size = new System.Drawing.Size(586, 574);
             this.dataGridView2.TabIndex = 18;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -206,7 +206,7 @@
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Location = new System.Drawing.Point(-174, -6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1314, 107);
+            this.panel3.Size = new System.Drawing.Size(1330, 107);
             this.panel3.TabIndex = 17;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -224,7 +224,7 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1222, 18);
+            this.pictureBox3.Location = new System.Drawing.Point(1238, 18);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(80, 77);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -236,7 +236,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1140, 636);
+            this.ClientSize = new System.Drawing.Size(1156, 675);
             this.ControlBox = false;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.dataGridView2);
@@ -245,6 +245,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Categoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categoria";
             this.Load += new System.EventHandler(this.Categoria_Load_1);
             this.panel5.ResumeLayout(false);

@@ -29,7 +29,6 @@ namespace GasolineraPUMA
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Ventas));
             this.txtIdFactura = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.Fecha = new System.Windows.Forms.DateTimePicker();
@@ -39,11 +38,7 @@ namespace GasolineraPUMA
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnReporte = new System.Windows.Forms.Button();
             this.dvgFactura = new System.Windows.Forms.DataGridView();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtISV = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,14 +47,18 @@ namespace GasolineraPUMA
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnSalida = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgFactura)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalida)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtIdFactura
@@ -139,30 +138,6 @@ namespace GasolineraPUMA
             this.label5.TabIndex = 13;
             this.label5.Text = "Fecha:";
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.BackgroundImage = global::GasolineraPUMA.Properties.Resources.boton_agregar;
-            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgregar.Location = new System.Drawing.Point(533, 493);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(48, 40);
-            this.btnAgregar.TabIndex = 21;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.BackColor = System.Drawing.Color.Transparent;
-            this.btnReporte.BackgroundImage = global::GasolineraPUMA.Properties.Resources.reporte;
-            this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReporte.Location = new System.Drawing.Point(533, 562);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(48, 40);
-            this.btnReporte.TabIndex = 23;
-            this.btnReporte.UseVisualStyleBackColor = false;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
-            // 
             // dvgFactura
             // 
             this.dvgFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -173,30 +148,6 @@ namespace GasolineraPUMA
             this.dvgFactura.TabIndex = 24;
             this.dvgFactura.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgFactura_CellClick);
             this.dvgFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgFactura_CellContentClick);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.BackgroundImage = global::GasolineraPUMA.Properties.Resources.cancelar;
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminar.Location = new System.Drawing.Point(533, 424);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(48, 38);
-            this.btnEliminar.TabIndex = 25;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightCoral;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.LightCoral;
-            this.dataGridView1.Location = new System.Drawing.Point(-2, -1);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1158, 138);
-            this.dataGridView1.TabIndex = 26;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -270,29 +221,51 @@ namespace GasolineraPUMA
             this.label10.TabIndex = 35;
             this.label10.Text = "Terminar Factura";
             // 
-            // btnSalida
+            // panel1
             // 
-            this.btnSalida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalida.Image = ((System.Drawing.Image)(resources.GetObject("btnSalida.Image")));
-            this.btnSalida.Location = new System.Drawing.Point(1062, 29);
-            this.btnSalida.Name = "btnSalida";
-            this.btnSalida.Size = new System.Drawing.Size(80, 77);
-            this.btnSalida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSalida.TabIndex = 36;
-            this.btnSalida.TabStop = false;
-            this.btnSalida.Click += new System.EventHandler(this.btnSalida_Click_1);
+            this.panel1.BackColor = System.Drawing.Color.LightCoral;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Location = new System.Drawing.Point(-4, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1161, 112);
+            this.panel1.TabIndex = 37;
             // 
-            // pictureBox1
+            // btnEliminar
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GasolineraPUMA.Properties.Resources.Ventas;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(387, 78);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BackgroundImage = global::GasolineraPUMA.Properties.Resources.cancelar;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.Location = new System.Drawing.Point(533, 424);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(48, 38);
+            this.btnEliminar.TabIndex = 25;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.Color.Transparent;
+            this.btnReporte.BackgroundImage = global::GasolineraPUMA.Properties.Resources.reporte;
+            this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReporte.Location = new System.Drawing.Point(533, 562);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(48, 40);
+            this.btnReporte.TabIndex = 23;
+            this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.BackgroundImage = global::GasolineraPUMA.Properties.Resources.boton_agregar;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregar.Location = new System.Drawing.Point(533, 493);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(48, 40);
+            this.btnAgregar.TabIndex = 21;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnLimpiar
             // 
@@ -306,18 +279,37 @@ namespace GasolineraPUMA
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GasolineraPUMA.Properties.Resources.Ventas1;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(366, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GasolineraPUMA.Properties.Resources.salida1;
+            this.pictureBox2.Location = new System.Drawing.Point(1049, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(69, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Frm_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1156, 675);
-            this.Controls.Add(this.btnSalida);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtISV);
@@ -336,7 +328,7 @@ namespace GasolineraPUMA
             this.Controls.Add(this.Fecha);
             this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.txtIdFactura);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Ventas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -344,9 +336,9 @@ namespace GasolineraPUMA
             this.Load += new System.EventHandler(this.Frm_Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgrProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgFactura)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalida)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,16 +359,16 @@ namespace GasolineraPUMA
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.DataGridView dvgFactura;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtISV;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox btnSalida;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

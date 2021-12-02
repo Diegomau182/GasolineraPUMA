@@ -40,8 +40,11 @@ namespace GasolineraPUMA
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarProducto)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBuscarProducto
@@ -159,19 +162,28 @@ namespace GasolineraPUMA
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCoral;
-            this.panel1.BackgroundImage = global::GasolineraPUMA.Properties.Resources.logo;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(1, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(276, 699);
-            this.panel1.TabIndex = 72;
+            this.panel1.Size = new System.Drawing.Size(273, 676);
+            this.panel1.TabIndex = 83;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GasolineraPUMA.Properties.Resources.logoGSM;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 240);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(233, 208);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 84;
+            this.pictureBox1.TabStop = false;
             // 
             // Frm_BuscarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 675);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.txtboxBuscarProducto);
             this.Controls.Add(this.panel2);
@@ -179,7 +191,6 @@ namespace GasolineraPUMA
             this.Controls.Add(this.dgvBuscarProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_BuscarProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -187,6 +198,8 @@ namespace GasolineraPUMA
             this.Load += new System.EventHandler(this.Frm_BuscarProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarProducto)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,10 +212,11 @@ namespace GasolineraPUMA
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtboxBuscarProducto;
         private CrystalDecisions.CrystalReports.Engine.ReportDocument reportDocument1;
         private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

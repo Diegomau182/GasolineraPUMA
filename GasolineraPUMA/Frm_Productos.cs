@@ -110,9 +110,9 @@ namespace GasolineraPUMA
 
         private void btn_Salir_Click_1(object sender, EventArgs e)
         {
-            //Form formulario = new Menu();
-            //formulario.Show();
-            Visible = false;
+            Frm_BuscarProductos buscarProductos = new Frm_BuscarProductos();
+            buscarProductos.Show();
+            this.Close();
         }
 
         private void btn_Buscar_Click(object sender, EventArgs e)
