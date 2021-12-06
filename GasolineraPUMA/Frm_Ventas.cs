@@ -49,7 +49,7 @@ namespace GasolineraPUMA
             total = total + subtotal;
             txtCantidad.Text = "";
             txtISV.Text = Convert.ToString(total * Convert.ToDecimal(0.15));
-            totalTotal = total - Convert.ToDecimal(txtISV.Text);
+            totalTotal = total + Convert.ToDecimal(txtISV.Text);
             txtTotal.Text = Convert.ToString(totalTotal);
              }
         }
@@ -198,7 +198,7 @@ namespace GasolineraPUMA
             dvgFactura.Rows.RemoveAt(Convert.ToInt32(fila));
             total = total - Convert.ToDecimal(subtotalEliminar);
             txtISV.Text = Convert.ToString(total * Convert.ToDecimal(0.15));
-            totalTotal = total - Convert.ToDecimal(txtISV.Text);
+            totalTotal = total + Convert.ToDecimal(txtISV.Text);
             txtTotal.Text = Convert.ToString(totalTotal);
             }
         }
