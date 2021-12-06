@@ -29,6 +29,7 @@ namespace GasolineraPUMA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -88,7 +89,7 @@ namespace GasolineraPUMA
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GasolineraPUMA.Properties.Resources.logoGSM1;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(19, 23);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(87, 73);
@@ -98,7 +99,7 @@ namespace GasolineraPUMA
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GasolineraPUMA.Properties.Resources.en_espera;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(787, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 53);
@@ -118,7 +119,7 @@ namespace GasolineraPUMA
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::GasolineraPUMA.Properties.Resources.proveedor__1_;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
             this.pictureBox8.Location = new System.Drawing.Point(11, 27);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(106, 127);
@@ -139,7 +140,7 @@ namespace GasolineraPUMA
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::GasolineraPUMA.Properties.Resources.metodo_de_pago;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(8, 27);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(106, 127);
@@ -160,7 +161,7 @@ namespace GasolineraPUMA
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::GasolineraPUMA.Properties.Resources.dinero_en_efectivo;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(9, 27);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(106, 127);
@@ -181,7 +182,7 @@ namespace GasolineraPUMA
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::GasolineraPUMA.Properties.Resources.inventario__1_;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(10, 27);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(106, 127);
@@ -203,7 +204,7 @@ namespace GasolineraPUMA
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::GasolineraPUMA.Properties.Resources.estacion_de_gasolina1;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(8, 27);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(106, 127);
@@ -214,7 +215,6 @@ namespace GasolineraPUMA
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::GasolineraPUMA.Properties.Resources.estacion_de_gasolina1;
             this.pictureBox3.Location = new System.Drawing.Point(7, 25);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(106, 127);

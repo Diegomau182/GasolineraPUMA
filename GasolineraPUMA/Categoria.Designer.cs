@@ -79,7 +79,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GasolineraPUMA.Properties.Resources.boton_editar;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(304, 394);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(77, 73);
@@ -90,7 +90,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GasolineraPUMA.Properties.Resources.guardar_el_archivo;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(24, 394);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(79, 73);
@@ -123,7 +123,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::GasolineraPUMA.Properties.Resources.limpiar;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(430, 394);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(77, 73);
@@ -134,7 +134,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::GasolineraPUMA.Properties.Resources.eliminar;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(154, 394);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(77, 73);

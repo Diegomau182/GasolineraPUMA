@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GasolineraPUMA.Reportes {
+namespace GSM {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace GasolineraPUMA.Reportes {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class ReporteProducto : ReportClass {
+    public class reporteProducto : ReportClass {
         
-        public ReporteProducto() {
+        public reporteProducto() {
         }
         
         public override string ResourceName {
             get {
-                return "ReporteProducto.rpt";
+                return "reporteProducto.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace GasolineraPUMA.Reportes {
         
         public override string FullResourceName {
             get {
-                return "GasolineraPUMA.Reportes.ReporteProducto.rpt";
+                return "GSM.reporteProducto.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace GasolineraPUMA.Reportes {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedReporteProducto : Component, ICachedReport {
+    public class CachedreporteProducto : Component, ICachedReport {
         
-        public CachedReporteProducto() {
+        public CachedreporteProducto() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace GasolineraPUMA.Reportes {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            ReporteProducto rpt = new ReporteProducto();
+            reporteProducto rpt = new reporteProducto();
             rpt.Site = this.Site;
             return rpt;
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GasolineraPUMA.Reportes {
+namespace GSM {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace GasolineraPUMA.Reportes {
         
         public override string FullResourceName {
             get {
-                return "GasolineraPUMA.Reportes.Factura.rpt";
+                return "GSM.Factura.rpt";
             }
             set {
                 // Do nothing

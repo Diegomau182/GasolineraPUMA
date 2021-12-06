@@ -19,8 +19,7 @@ namespace GasolineraPUMA
 
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
-            Reportes.ReporteProducto producto = new Reportes.ReporteProducto();
-            crystalReportViewer1.ReportSource = producto;
+           
         }
     }
 }

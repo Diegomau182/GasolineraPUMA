@@ -29,6 +29,7 @@ namespace GasolineraPUMA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_BuscarProductos));
             this.dgvBuscarProducto = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -107,7 +108,7 @@ namespace GasolineraPUMA
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.BackgroundImage = global::GasolineraPUMA.Properties.Resources.salida;
+            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -133,7 +134,7 @@ namespace GasolineraPUMA
             // 
             // btnReporte
             // 
-            this.btnReporte.BackgroundImage = global::GasolineraPUMA.Properties.Resources.reporte;
+            this.btnReporte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReporte.BackgroundImage")));
             this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnReporte.FlatAppearance.BorderSize = 0;
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -147,7 +148,6 @@ namespace GasolineraPUMA
             // btnAgregarProducto
             // 
             this.btnAgregarProducto.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarProducto.BackgroundImage = global::GasolineraPUMA.Properties.Resources.boton_agregar;
             this.btnAgregarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAgregarProducto.FlatAppearance.BorderSize = 0;
             this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -170,7 +170,7 @@ namespace GasolineraPUMA
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GasolineraPUMA.Properties.Resources.logoGSM;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(18, 240);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(233, 208);

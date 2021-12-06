@@ -29,6 +29,7 @@ namespace GasolineraPUMA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Ventas));
             this.txtIdFactura = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.Fecha = new System.Windows.Forms.DateTimePicker();
@@ -48,17 +49,17 @@ namespace GasolineraPUMA
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgFactura)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtIdFactura
@@ -236,19 +237,9 @@ namespace GasolineraPUMA
             this.panel1.Size = new System.Drawing.Size(1161, 112);
             this.panel1.TabIndex = 37;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GasolineraPUMA.Properties.Resources.Ventas1;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(366, 82);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GasolineraPUMA.Properties.Resources.salida1;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1049, 16);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(69, 64);
@@ -260,7 +251,7 @@ namespace GasolineraPUMA
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.BackgroundImage = global::GasolineraPUMA.Properties.Resources.cancelar;
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.Location = new System.Drawing.Point(533, 424);
             this.btnEliminar.Name = "btnEliminar";
@@ -272,7 +263,7 @@ namespace GasolineraPUMA
             // btnReporte
             // 
             this.btnReporte.BackColor = System.Drawing.Color.Transparent;
-            this.btnReporte.BackgroundImage = global::GasolineraPUMA.Properties.Resources.reporte;
+            this.btnReporte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReporte.BackgroundImage")));
             this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReporte.Location = new System.Drawing.Point(533, 562);
             this.btnReporte.Name = "btnReporte";
@@ -284,7 +275,7 @@ namespace GasolineraPUMA
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.BackgroundImage = global::GasolineraPUMA.Properties.Resources.boton_agregar;
+            this.btnAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregar.BackgroundImage")));
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregar.Location = new System.Drawing.Point(533, 493);
             this.btnAgregar.Name = "btnAgregar";
@@ -296,7 +287,7 @@ namespace GasolineraPUMA
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
-            this.btnLimpiar.BackgroundImage = global::GasolineraPUMA.Properties.Resources.limpiar;
+            this.btnLimpiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.BackgroundImage")));
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLimpiar.Location = new System.Drawing.Point(533, 359);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -304,6 +295,16 @@ namespace GasolineraPUMA
             this.btnLimpiar.TabIndex = 20;
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(26, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(366, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Frm_Ventas
             // 
@@ -342,8 +343,8 @@ namespace GasolineraPUMA
             ((System.ComponentModel.ISupportInitialize)(this.dtgrProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgFactura)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

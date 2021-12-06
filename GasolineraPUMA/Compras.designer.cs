@@ -29,6 +29,7 @@ namespace GasolineraPUMA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmCompras));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -88,7 +89,7 @@ namespace GasolineraPUMA
             // 
             // btnSalir
             // 
-            this.btnSalir.Image = global::GasolineraPUMA.Properties.Resources.salida;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.Location = new System.Drawing.Point(1041, 30);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(67, 50);
@@ -99,7 +100,7 @@ namespace GasolineraPUMA
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GasolineraPUMA.Properties.Resources.Compras1;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(32, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(400, 87);
@@ -254,7 +255,7 @@ namespace GasolineraPUMA
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Image = global::GasolineraPUMA.Properties.Resources.guardar_el_archivo;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.Location = new System.Drawing.Point(849, 226);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(53, 49);
@@ -265,7 +266,7 @@ namespace GasolineraPUMA
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Image = global::GasolineraPUMA.Properties.Resources.boton_agregar;
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.Location = new System.Drawing.Point(849, 155);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(53, 49);
@@ -276,7 +277,7 @@ namespace GasolineraPUMA
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Image = global::GasolineraPUMA.Properties.Resources.eliminar;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(849, 85);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(53, 48);
@@ -287,7 +288,7 @@ namespace GasolineraPUMA
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Image = global::GasolineraPUMA.Properties.Resources.limpiar;
+            this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.Location = new System.Drawing.Point(849, 19);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(53, 42);

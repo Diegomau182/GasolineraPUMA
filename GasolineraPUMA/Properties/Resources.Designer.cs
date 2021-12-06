@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GasolineraPUMA.Properties {
+namespace GSM.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace GasolineraPUMA.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GasolineraPUMA.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GSM.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -293,6 +293,16 @@ namespace GasolineraPUMA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap salida2 {
+            get {
+                object obj = ResourceManager.GetObject("salida2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ventas {
             get {
                 object obj = ResourceManager.GetObject("Ventas", resourceCulture);
@@ -306,6 +316,26 @@ namespace GasolineraPUMA.Properties {
         internal static System.Drawing.Bitmap Ventas1 {
             get {
                 object obj = ResourceManager.GetObject("Ventas1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ventas2 {
+            get {
+                object obj = ResourceManager.GetObject("Ventas2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ventas3 {
+            get {
+                object obj = ResourceManager.GetObject("Ventas3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
