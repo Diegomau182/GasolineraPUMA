@@ -1,12 +1,6 @@
 ﻿using GasolineraPUMA.Clases;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GasolineraPUMA
@@ -158,6 +152,10 @@ namespace GasolineraPUMA
             if (txt_IDProducto.Text == string.Empty || txt_NombreProducto.Text == string.Empty || txt_PrecioProducto.Text == string.Empty || txt_CantidadProducto.Text == string.Empty)
             {
                 MessageBox.Show("Debe llenar todos los campos", "Error en Editar");
+            }
+            else if (txt_IDProducto.Text == " "|| txt_NombreProducto.Text == " " || txt_PrecioProducto.Text == " " || txt_CantidadProducto.Text == " ")
+            {
+                MessageBox.Show("No puede ir vacio los campos", "Error en Editar");
             }
             else
             {

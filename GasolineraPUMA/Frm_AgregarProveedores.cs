@@ -217,6 +217,46 @@ namespace GasolineraPUMA
             limpiarPantallaPro();
         }
 
+        private void txt_rtnPro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soloNumeros(e);
+        }
+
+        private void txt_empresaPro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soloLetras(e);
+        }
+
+        private void txt_nombrePro_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txt_apellidoPro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_apellidoPro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soloLetras(e);
+        }
+
+        private void txt_correoPro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soloLetras(e);
+        }
+
+        private void txt_telefonoPro_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txt_telefonoPro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soloNumeros(e);
+        }
+
         /*private void txt_correoPro_TextChanged(object sender, KeyPressEventArgs e)
         {
             v.IsValidEmail(e);

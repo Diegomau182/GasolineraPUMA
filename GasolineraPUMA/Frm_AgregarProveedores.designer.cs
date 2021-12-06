@@ -160,6 +160,7 @@
             this.txt_rtnPro.Name = "txt_rtnPro";
             this.txt_rtnPro.Size = new System.Drawing.Size(552, 31);
             this.txt_rtnPro.TabIndex = 9;
+            this.txt_rtnPro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_rtnPro_KeyPress);
             // 
             // txt_empresaPro
             // 
@@ -169,6 +170,7 @@
             this.txt_empresaPro.Size = new System.Drawing.Size(552, 31);
             this.txt_empresaPro.TabIndex = 10;
             this.txt_empresaPro.TextChanged += new System.EventHandler(this.empresaPro_TextChanged);
+            this.txt_empresaPro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_empresaPro_KeyPress);
             // 
             // txt_nombrePro
             // 
@@ -177,6 +179,7 @@
             this.txt_nombrePro.Name = "txt_nombrePro";
             this.txt_nombrePro.Size = new System.Drawing.Size(552, 31);
             this.txt_nombrePro.TabIndex = 11;
+            this.txt_nombrePro.TextChanged += new System.EventHandler(this.txt_nombrePro_TextChanged);
             // 
             // txt_apellidoPro
             // 
@@ -185,6 +188,8 @@
             this.txt_apellidoPro.Name = "txt_apellidoPro";
             this.txt_apellidoPro.Size = new System.Drawing.Size(552, 31);
             this.txt_apellidoPro.TabIndex = 12;
+            this.txt_apellidoPro.TextChanged += new System.EventHandler(this.txt_apellidoPro_TextChanged);
+            this.txt_apellidoPro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidoPro_KeyPress);
             // 
             // txt_correoPro
             // 
@@ -193,6 +198,7 @@
             this.txt_correoPro.Name = "txt_correoPro";
             this.txt_correoPro.Size = new System.Drawing.Size(552, 31);
             this.txt_correoPro.TabIndex = 13;
+            this.txt_correoPro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_correoPro_KeyPress);
             // 
             // txt_telefonoPro
             // 
@@ -201,6 +207,8 @@
             this.txt_telefonoPro.Name = "txt_telefonoPro";
             this.txt_telefonoPro.Size = new System.Drawing.Size(552, 31);
             this.txt_telefonoPro.TabIndex = 14;
+            this.txt_telefonoPro.TextChanged += new System.EventHandler(this.txt_telefonoPro_TextChanged);
+            this.txt_telefonoPro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefonoPro_KeyPress);
             // 
             // guardarPro
             // 

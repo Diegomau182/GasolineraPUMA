@@ -48,12 +48,12 @@ namespace GasolineraPUMA
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgFactura)).BeginInit();
             this.panel1.SuspendLayout();
@@ -63,17 +63,19 @@ namespace GasolineraPUMA
             // 
             // txtIdFactura
             // 
-            this.txtIdFactura.Location = new System.Drawing.Point(96, 154);
+            this.txtIdFactura.Location = new System.Drawing.Point(96, 155);
             this.txtIdFactura.Name = "txtIdFactura";
-            this.txtIdFactura.Size = new System.Drawing.Size(126, 20);
+            this.txtIdFactura.Size = new System.Drawing.Size(253, 20);
             this.txtIdFactura.TabIndex = 2;
+            this.txtIdFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNombreCliente
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(394, 151);
+            this.txtNombreCliente.Location = new System.Drawing.Point(468, 154);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(250, 20);
             this.txtNombreCliente.TabIndex = 4;
+            this.txtNombreCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
             // 
             // Fecha
@@ -99,12 +101,13 @@ namespace GasolineraPUMA
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(126, 20);
             this.txtCantidad.TabIndex = 8;
+            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 155);
+            this.label2.Location = new System.Drawing.Point(39, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 10;
@@ -114,7 +117,7 @@ namespace GasolineraPUMA
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(310, 155);
+            this.label3.Location = new System.Drawing.Point(384, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 11;
@@ -166,6 +169,7 @@ namespace GasolineraPUMA
             this.txtISV.Name = "txtISV";
             this.txtISV.Size = new System.Drawing.Size(179, 20);
             this.txtISV.TabIndex = 28;
+            this.txtISV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -183,6 +187,7 @@ namespace GasolineraPUMA
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(179, 20);
             this.txtTotal.TabIndex = 30;
+            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTotal.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label7
@@ -231,6 +236,27 @@ namespace GasolineraPUMA
             this.panel1.Size = new System.Drawing.Size(1161, 112);
             this.panel1.TabIndex = 37;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GasolineraPUMA.Properties.Resources.Ventas1;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(366, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GasolineraPUMA.Properties.Resources.salida1;
+            this.pictureBox2.Location = new System.Drawing.Point(1049, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(69, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
@@ -278,27 +304,6 @@ namespace GasolineraPUMA
             this.btnLimpiar.TabIndex = 20;
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GasolineraPUMA.Properties.Resources.Ventas1;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(366, 82);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GasolineraPUMA.Properties.Resources.salida1;
-            this.pictureBox2.Location = new System.Drawing.Point(1049, 16);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(69, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Frm_Ventas
             // 
